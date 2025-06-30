@@ -1,0 +1,13 @@
+{
+    "name": "Alice",
+    "calorie_target": 2200,
+    "macro_ratios": {
+        "protein": 0.25,
+        "carbs": 0.5,
+        "fat": 0.25
+    },
+    "dietary_restrictions": ["vegetarian", "nut_free"],
+    "meals_per_day": 3,
+    "snack_slots": 1,
+    "max_prep_time_minutes": 30
+}

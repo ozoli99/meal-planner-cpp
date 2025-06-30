@@ -1,0 +1,35 @@
+[
+    {
+        "id": "r1",
+        "name": "Oatmeal with Berries",
+        "type": "breakfast",
+        "kcal": 350,
+        "protein": 12,
+        "carbs": 55,
+        "fat": 8,
+        "prep_time_minutes": 5,
+        "tags": ["vegetarian", "nut_free"]
+    },
+    {
+        "id": "r2",
+        "name": "Quinoa Chickpea Salad",
+        "type": "lunch",
+        "kcal": 600,
+        "protein": 20,
+        "carbs": 70,
+        "fat": 20,
+        "prep_time_minutes": 15,
+        "tags": ["vegetarian", "nut_free"]
+    },
+    {
+        "id": "r3",
+        "name": "Tofu Stir-fry",
+        "type": "dinner",
+        "kcal": 700,
+        "protein": 25,
+        "carbs": 65,
+        "fat": 28,
+        "prep_time_minutes": 20,
+        "tags": ["vegetarian"]
+    }
+]
