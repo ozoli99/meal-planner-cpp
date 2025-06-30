@@ -31,7 +31,7 @@ int main(int argc, char** argv) {
     app.add_option("-u,--user", userPath, "Path to user profile JSON")->required();
     app.add_option("-r,--recipes", recipePath, "Path to recipes JSON")->required();
     app.add_option("-p,--plan", planType, "Meal plan type (default: balanced)");
-    app.add_option("-f,--format", format, "Output format: text or json")->check(CLI::IsMember({"text", "json"}));
+    app.add_option("-f,--format", format, "Output format: text, json or markdown")->check(CLI::IsMember({"text", "json"}));
     app.add_flag("-v,--verbose", verbose, "Enable detailed output");
     app.add_option("-o,--output", outputPath, "Optional output file path");
 

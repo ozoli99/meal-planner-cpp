@@ -15,6 +15,7 @@ add_executable(mealplanner
     src/interface/presenter/MealPlanPresenter.cpp
     src/interface/presenter/TextMealPlanFormatter.cpp
     src/interface/presenter/JsonMealPlanFormatter.cpp
+    src/interface/presenter/MarkdownMealPlanFormatter.cpp
     src/application/BalancedMealPlanner.cpp
     src/infrastructure/JsonDataLoader.cpp
     src/core/NutritionUtils.cpp

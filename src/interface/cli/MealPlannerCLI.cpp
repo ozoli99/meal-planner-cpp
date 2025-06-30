@@ -17,6 +17,7 @@ void MealPlannerCLI::run(const std::string& userFile, const std::string& recipeF
         std::cout << "  --plan       Planning strategy (default: balanced).\n";
         std::cout << "  --verbose    Show detailed output (default: false).\n";
         std::cout << "  --output     Export the result to a file.\n";
+        std::cout << "  --format     Output format: text | json | markdown (default: text)\n";
         std::cout << "  --help       Show this help message.\n";
         return;
     }
@@ -32,10 +33,10 @@ void MealPlannerCLI::run(const std::string& userFile, const std::string& recipeF
 
         MealPlan plan = m_planner.generateMealPlan(recipes, user);
 
-        MealPlanPresenter::printToConsole(plan, format, verbose);
+        MealPlanPresenter::PrintToConsole(plan, format, verbose);
 
         if (!outputPath.empty()) {
-            MealPlanPresenter::exportToFile(plan, outputPath, format, verbose);
+            MealPlanPresenter::ExportToFile(plan, outputPath, format, verbose);
             std::cout << "📄 Meal plan exported to " << outputPath << "\n";
         }
     } catch (const std::exception& e) {
