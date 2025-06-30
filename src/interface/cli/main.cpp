@@ -12,8 +12,12 @@ int main(int argc, char** argv) {
     SetConsoleOutputCP(CP_UTF8);
 #endif
 
-    CLI::App app{"🍽️ Meal Planner CLI"};
+    CLI::App app{"🍽️ Meal Planner CLI - Generate meal plans from recipes and user profiles."};
     
+    std::string version = "1.0.0";
+    app.set_version_flag("-V,--version", version);
+    app.set_help_flag("-h,--help", "Show this help message");
+
     std::string userPath;
     std::string recipePath;
     std::string outputPath;
@@ -31,7 +35,7 @@ int main(int argc, char** argv) {
     app.add_option("-u,--user", userPath, "Path to user profile JSON")->required();
     app.add_option("-r,--recipes", recipePath, "Path to recipes JSON")->required();
     app.add_option("-p,--plan", planType, "Meal plan type (default: balanced)");
-    app.add_option("-f,--format", format, "Output format: text, json or markdown")->check(CLI::IsMember({"text", "json"}));
+    app.add_option("-f,--format", format, "Output format: text, json or markdown")->check(CLI::IsMember({"text", "json", "markdown"}));
     app.add_flag("-v,--verbose", verbose, "Enable detailed output");
     app.add_option("-o,--output", outputPath, "Optional output file path");
 

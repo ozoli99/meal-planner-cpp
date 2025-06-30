@@ -8,20 +8,6 @@ MealPlannerCLI::MealPlannerCLI(IRecipeRepository& recipeRepository, IMealPlanner
     , m_planner(planner) {}
 
 void MealPlannerCLI::run(const std::string& userFile, const std::string& recipeFile, const std::string& planType, bool verbose, const std::string& outputPath, const std::string& format) {
-    if (userFile == "--help" || recipeFile == "--help" || planType == "--help" || outputPath == "--help") {
-        std::cout << "📘 Meal Planner CLI Usage:\n";
-        std::cout << "  mealplanner.exe --user <user.json> --recipes <recipes.json> [--plan <type>] [--verbose true|false] [--output <path>]\n\n";
-        std::cout << "Options:\n";
-        std::cout << "  --user       Path to user profile JSON file.\n";
-        std::cout << "  --recipes    Path to recipes JSON file.\n";
-        std::cout << "  --plan       Planning strategy (default: balanced).\n";
-        std::cout << "  --verbose    Show detailed output (default: false).\n";
-        std::cout << "  --output     Export the result to a file.\n";
-        std::cout << "  --format     Output format: text | json | markdown (default: text)\n";
-        std::cout << "  --help       Show this help message.\n";
-        return;
-    }
-
     try {
         UserProfile user = m_recipeRepository.loadUserProfile(userFile);
         std::vector<Recipe> recipes = m_recipeRepository.loadRecipes(recipeFile);
