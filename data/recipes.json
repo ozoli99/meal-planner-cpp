@@ -9,29 +9,17 @@
             {
                 "name": "oats",
                 "quantity": 50,
-                "unit": "g",
-                "kcal_per_unit": 3.89,
-                "protein_per_unit": 0.17,
-                "carbs_per_unit": 0.66,
-                "fat_per_unit": 0.07
+                "unit": "g"
             },
             {
                 "name": "blueberries",
                 "quantity": 100,
-                "unit": "g",
-                "kcal_per_unit": 0.57,
-                "protein_per_unit": 0.007,
-                "carbs_per_unit": 0.14,
-                "fat_per_unit": 0.003
+                "unit": "g"
             },
             {
                 "name": "almond milk",
                 "quantity": 200,
-                "unit": "ml",
-                "kcal_per_unit": 0.15,
-                "protein_per_unit": 0.006,
-                "carbs_per_unit": 0.02,
-                "fat_per_unit": 0.01
+                "unit": "ml"
             }
         ]
     },
@@ -56,29 +44,17 @@
             {
                 "name": "tofu",
                 "quantity": 150,
-                "unit": "g",
-                "kcal_per_unit": 1.43,
-                "protein_per_unit": 0.15,
-                "carbs_per_unit": 0.017,
-                "fat_per_unit": 0.09
+                "unit": "g"
             },
             {
                 "name": "broccoli",
                 "quantity": 100,
-                "unit": "g",
-                "kcal_per_unit": 0.34,
-                "protein_per_unit": 0.028,
-                "carbs_per_unit": 0.07,
-                "fat_per_unit": 0.004
+                "unit": "g"
             },
             {
                 "name": "soy sauce",
                 "quantity": 15,
-                "unit": "ml",
-                "kcal_per_unit": 0.53,
-                "protein_per_unit": 0.09,
-                "carbs_per_unit": 0.04,
-                "fat_per_unit": 0.002
+                "unit": "ml"
             }
         ]
     }

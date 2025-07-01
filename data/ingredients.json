@@ -1,0 +1,23 @@
+[
+    {
+        "name": "oats",
+        "kcal_per_100g": 389,
+        "protein_per_100g": 16.9,
+        "carbs_per_100g": 66.3,
+        "fat_per_100g": 6.9
+    },
+    {
+        "name": "blueberries",
+        "kcal_per_100g": 57,
+        "protein_per_100g": 0.7,
+        "carbs_per_100g": 14.5,
+        "fat_per_100g": 0.3
+    },
+    {
+        "name": "chickpeas",
+        "kcal_per_100g": 164,
+        "protein_per_100g": 8.9,
+        "carbs_per_100g": 27.4,
+        "fat_per_100g": 2.6
+    }
+]
