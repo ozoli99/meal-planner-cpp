@@ -5,14 +5,17 @@ MealPlan BalancedMealPlanner::generateMealPlan(const std::vector<Recipe>& recipe
     MealPlan plan;
 
     for (const auto& recipe : recipes) {
-        if (recipe.prepTimeMinutes > user.maxPrepTimeMinutes)
+        if (recipe.prepTimeMinutes > user.maxPrepTimeMinutes) {
             continue;
+        }
 
-        if (!NutritionUtils::isRecipeCompliant(recipe, user.dietaryRestrictions))
+        if (!NutritionUtils::isRecipeCompliant(recipe, user.dietaryRestrictions)) {
             continue;
+        }
 
-        if (plan.totalKcal + recipe.kcal > user.calorieTarget * 1.1)
+        if (plan.totalKcal + recipe.kcal > user.calorieTarget * 1.1) {
             continue;
+        }
 
         plan.selectedRecipes.push_back(recipe);
         plan.totalKcal += recipe.kcal;

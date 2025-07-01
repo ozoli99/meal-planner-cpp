@@ -3,12 +3,37 @@
         "id": "r1",
         "name": "Oatmeal with Berries",
         "type": "breakfast",
-        "kcal": 350,
-        "protein": 12,
-        "carbs": 55,
-        "fat": 8,
         "prep_time_minutes": 5,
-        "tags": ["vegetarian", "nut_free"]
+        "tags": ["vegetarian", "nut_free"],
+        "ingredients": [
+            {
+                "name": "oats",
+                "quantity": 50,
+                "unit": "g",
+                "kcal_per_unit": 3.89,
+                "protein_per_unit": 0.17,
+                "carbs_per_unit": 0.66,
+                "fat_per_unit": 0.07
+            },
+            {
+                "name": "blueberries",
+                "quantity": 100,
+                "unit": "g",
+                "kcal_per_unit": 0.57,
+                "protein_per_unit": 0.007,
+                "carbs_per_unit": 0.14,
+                "fat_per_unit": 0.003
+            },
+            {
+                "name": "almond milk",
+                "quantity": 200,
+                "unit": "ml",
+                "kcal_per_unit": 0.15,
+                "protein_per_unit": 0.006,
+                "carbs_per_unit": 0.02,
+                "fat_per_unit": 0.01
+            }
+        ]
     },
     {
         "id": "r2",
@@ -25,11 +50,36 @@
         "id": "r3",
         "name": "Tofu Stir-fry",
         "type": "dinner",
-        "kcal": 700,
-        "protein": 25,
-        "carbs": 65,
-        "fat": 28,
         "prep_time_minutes": 20,
-        "tags": ["vegetarian"]
+        "tags": ["vegetarian"],
+        "ingredients": [
+            {
+                "name": "tofu",
+                "quantity": 150,
+                "unit": "g",
+                "kcal_per_unit": 1.43,
+                "protein_per_unit": 0.15,
+                "carbs_per_unit": 0.017,
+                "fat_per_unit": 0.09
+            },
+            {
+                "name": "broccoli",
+                "quantity": 100,
+                "unit": "g",
+                "kcal_per_unit": 0.34,
+                "protein_per_unit": 0.028,
+                "carbs_per_unit": 0.07,
+                "fat_per_unit": 0.004
+            },
+            {
+                "name": "soy sauce",
+                "quantity": 15,
+                "unit": "ml",
+                "kcal_per_unit": 0.53,
+                "protein_per_unit": 0.09,
+                "carbs_per_unit": 0.04,
+                "fat_per_unit": 0.002
+            }
+        ]
     }
 ]

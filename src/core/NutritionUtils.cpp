@@ -21,3 +21,18 @@ bool NutritionUtils::isRecipeCompliant(const Recipe& recipe, const std::vector<s
     }
     return true;
 }
+
+Recipe NutritionUtils::computeNutritionFromIngredients(const Recipe& recipe) {
+    Recipe copy = recipe;
+    copy.kcal = 0;
+    copy.protein = 0;
+    copy.carbs = 0;
+    copy.fat = 0;
+    for (const auto& ingredient : recipe.ingredients) {
+        copy.kcal += ingredient.kcalPerUnit * ingredient.quantity;
+        copy.protein += ingredient.proteinPerUnit * ingredient.quantity;
+        copy.carbs += ingredient.carbsPerUnit * ingredient.quantity;
+        copy.fat += ingredient.fatPerUnit * ingredient.quantity;
+    }
+    return copy;
+}

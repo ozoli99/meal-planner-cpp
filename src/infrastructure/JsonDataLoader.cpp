@@ -1,4 +1,5 @@
 #include "infrastructure/JsonDataLoader.h"
+#include "core/NutritionUtils.h"
 #include <nlohmann/json.hpp>
 #include <fstream>
 #include <iostream>
@@ -18,17 +19,32 @@ std::vector<Recipe> JsonDataLoader::loadRecipes(const std::string& path) {
     std::vector<Recipe> recipes;
     for (const auto& r : data) {
         try {
-            recipes.push_back({
-                r.at("id"),
-                r.at("name"),
-                r.at("type"),
-                r.at("kcal"),
-                r.at("protein"),
-                r.at("carbs"),
-                r.at("fat"),
-                r.at("prep_time_minutes"),
-                r.at("tags").get<std::vector<std::string>>()
-            });
+            Recipe recipe;
+            recipe.id = r.at("id");
+            recipe.name = r.at("name");
+            recipe.type = r.at("type");
+            recipe.prepTimeMinutes = r.at("prep_time_minutes");
+            recipe.tags = r.at("tags").get<std::vector<std::string>>();
+            if (r.contains("ingredients")) {
+                for (const auto& ingredient : r["ingredients"]) {
+                    recipe.ingredients.push_back({
+                        ingredient.at("name");
+                        ingredient.at("quantity");
+                        ingredient.at("unit");
+                        ingredient.at("kcal_per_unit");
+                        ingredient.at("protein_per_unit");
+                        ingredient.at("carbs_per_unit");
+                        ingredient.at("fat_per_unit");
+                    });
+                }
+                recipe = NutritionUtils::computeNutritionFromIngredients(recipe);
+            } else {
+                recipe.kcal = r.at("kcal");
+                recipe.protein = r.at("protein");
+                recipe.carbs = r.at("carbs");
+                recipe.fat = r.at("fat");
+            }
+            recipes.push_back(recipe);
         } catch (...) {
             std::cerr << "Warning: Skipped invalid recipe\n";
         }
