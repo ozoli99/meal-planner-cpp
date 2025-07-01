@@ -1,10 +1,52 @@
 [
     {
-        "name": "oats",
-        "kcal_per_100g": 389,
-        "protein_per_100g": 16.9,
-        "carbs_per_100g": 66.3,
-        "fat_per_100g": 6.9
+        "name": "almond milk",
+        "kcal_per_100g": 19,
+        "protein_per_100g": 0.7,
+        "carbs_per_100g": 0.7,
+        "fat_per_100g": 1.6
+    },
+    {
+        "name": "apples",
+        "kcal_per_100g": 65,
+        "protein_per_100g": 0.2,
+        "carbs_per_100g": 15.6,
+        "fat_per_100g": 0.2
+    },
+    {
+        "name": "apricot",
+        "kcal_per_100g": 48,
+        "protein_per_100g": 1,
+        "carbs_per_100g": 10.2,
+        "fat_per_100g": 0.4
+    },
+    {
+        "name": "asparagus",
+        "kcal_per_100g": 28,
+        "protein_per_100g": 1.4,
+        "carbs_per_100g": 5.1,
+        "fat_per_100g": 0.2
+    },
+    {
+        "name": "avocado",
+        "kcal_per_100g": 223,
+        "protein_per_100g": 1.8,
+        "carbs_per_100g": 8.3,
+        "fat_per_100g": 20.3
+    },
+    {
+        "name": "bananas",
+        "kcal_per_100g": 98,
+        "protein_per_100g": 0.7,
+        "carbs_per_100g": 23,
+        "fat_per_100g": 0.3
+    },
+    {
+        "name": "beets",
+        "kcal_per_100g": 45,
+        "protein_per_100g": 1.7,
+        "carbs_per_100g": 8.8,
+        "fat_per_100g": 0.3
     },
     {
         "name": "blueberries",
@@ -14,10 +56,206 @@
         "fat_per_100g": 0.3
     },
     {
+        "name": "broccoli",
+        "kcal_per_100g": 39,
+        "protein_per_100g": 2.6,
+        "carbs_per_100g": 6.3,
+        "fat_per_100g": 0.3
+    },
+    {
+        "name": "brussels sprouts",
+        "kcal_per_100g": 59,
+        "protein_per_100g": 4,
+        "carbs_per_100g": 9.6,
+        "fat_per_100g": 0.6
+    },
+    {
+        "name": "buckwheat",
+        "kcal_per_100g": 356,
+        "protein_per_100g": 11.1,
+        "carbs_per_100g": 71.1,
+        "fat_per_100g": 3
+    },
+    {
+        "name": "bulgur",
+        "kcal_per_100g": 372,
+        "protein_per_100g": 11.8,
+        "carbs_per_100g": 75.9,
+        "fat_per_100g": 2.4
+    },
+    {
+        "name": "cauliflower",
+        "kcal_per_100g": 28,
+        "protein_per_100g": 1.6,
+        "carbs_per_100g": 4.7,
+        "fat_per_100g": 0.2
+    },
+    {
+        "name": "celery",
+        "kcal_per_100g": 17,
+        "protein_per_100g": 0.5,
+        "carbs_per_100g": 3.3,
+        "fat_per_100g": 0.2
+    },
+    {
+        "name": "cheese, cottage",
+        "kcal_per_100g": 103,
+        "protein_per_100g": 11.6,
+        "carbs_per_100g": 4.6,
+        "fat_per_100g": 4.2
+    },
+    {
+        "name": "cheese, feta",
+        "kcal_per_100g": 273,
+        "protein_per_100g": 19.7,
+        "carbs_per_100g": 5.6,
+        "fat_per_100g": 19.1
+    },
+    {
+        "name": "cheese, mozzarella",
+        "kcal_per_100g": 296,
+        "protein_per_100g": 23.7,
+        "carbs_per_100g": 4.4,
+        "fat_per_100g": 20.4
+    },
+    {
+        "name": "cheese, ricotta",
+        "kcal_per_100g": 157,
+        "protein_per_100g": 7.8,
+        "carbs_per_100g": 6.9,
+        "fat_per_100g": 11
+    },
+    {
+        "name": "chia seeds",
+        "kcal_per_100g": 517,
+        "protein_per_100g": 17,
+        "carbs_per_100g": 38.3,
+        "fat_per_100g": 32.9
+    },
+    {
+        "name": "chicken, breast",
+        "kcal_per_100g": 106,
+        "protein_per_100g": 22.5,
+        "carbs_per_100g": 0,
+        "fat_per_100g": 1.9
+    },
+    {
+        "name": "chicken, drumstick",
+        "kcal_per_100g": 125,
+        "protein_per_100g": 18.4,
+        "carbs_per_100g": 0,
+        "fat_per_100g": 5.9
+    },
+    {
+        "name": "chicken, thigh",
+        "kcal_per_100g": 144,
+        "protein_per_100g": 18.6,
+        "carbs_per_100g": 0,
+        "fat_per_100g": 7.9
+    },
+    {
+        "name": "chicken, wing",
+        "kcal_per_100g": 168,
+        "protein_per_100g": 18.4,
+        "carbs_per_100g": 0,
+        "fat_per_100g": 10.6
+    },
+    {
         "name": "chickpeas",
         "kcal_per_100g": 164,
         "protein_per_100g": 8.9,
         "carbs_per_100g": 27.4,
         "fat_per_100g": 2.6
+    },
+    {
+        "name": "corn flour",
+        "kcal_per_100g": 376,
+        "protein_per_100g": 7.6,
+        "carbs_per_100g": 76.7,
+        "fat_per_100g": 4.3
+    },
+    {
+        "name": "corn",
+        "kcal_per_100g": 85,
+        "protein_per_100g": 2.8,
+        "carbs_per_100g": 14.7,
+        "fat_per_100g": 1.6
+    },
+    {
+        "name": "cucumber",
+        "kcal_per_100g": 16,
+        "protein_per_100g": 0.6,
+        "carbs_per_100g": 3,
+        "fat_per_100g": 0.2
+    },
+    {
+        "name": "egg white",
+        "kcal_per_100g": 52,
+        "protein_per_100g": 10.7,
+        "carbs_per_100g": 2.4,
+        "fat_per_100g": 0.1
+    },
+    {
+        "name": "egg",
+        "kcal_per_100g": 143,
+        "protein_per_100g": 12.4,
+        "carbs_per_100g": 1,
+        "fat_per_100g": 10
+    },
+    {
+        "name": "egg yolk",
+        "kcal_per_100g": 328,
+        "protein_per_100g": 16.2,
+        "carbs_per_100g": 1,
+        "fat_per_100g": 28.8
+    },
+    {
+        "name": "fish, catfish",
+        "kcal_per_100g": 129,
+        "protein_per_100g": 16.5,
+        "carbs_per_100g": 0,
+        "fat_per_100g": 7.3
+    },
+    {
+        "name": "fish, cod",
+        "kcal_per_100g": 66,
+        "protein_per_100g": 16.1,
+        "carbs_per_100g": 0,
+        "fat_per_100g": 0.7
+    },
+    {
+        "name": "fish, haddock",
+        "kcal_per_100g": 69,
+        "protein_per_100g": 16.3,
+        "carbs_per_100g": 0,
+        "fat_per_100g": 0.45
+    },
+    {
+        "name": "fish, pollock",
+        "kcal_per_100g": 53,
+        "protein_per_100g": 12.3,
+        "carbs_per_100g": 0,
+        "fat_per_100g": 0.4
+    },
+    {
+        "name": "fish, salmon",
+        "kcal_per_100g": 197,
+        "protein_per_100g": 20.3,
+        "carbs_per_100g": 0,
+        "fat_per_100g": 13.1
+    },
+    {
+        "name": "fish, tilapia",
+        "kcal_per_100g": 95,
+        "protein_per_100g": 19,
+        "carbs_per_100g": 0,
+        "fat_per_100g": 2.5
+    },
+    {
+        "name": "oats",
+        "kcal_per_100g": 382,
+        "protein_per_100g": 13.5,
+        "carbs_per_100g": 68.7,
+        "fat_per_100g": 5.9
     }
 ]
