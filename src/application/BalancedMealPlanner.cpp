@@ -1,5 +1,7 @@
 #include "application/BalancedMealPlanner.h"
+#include "core/NutritionCalculator.h"
 #include "core/NutritionUtils.h"
+
 #include <algorithm>
 #include <cstdlib>
 #include <ctime>
@@ -47,6 +49,7 @@ MealPlan BalancedMealPlanner::generateMealPlan(const std::vector<Recipe>& allRec
                         if (__builtin_popcount(mask) != user.snackSlots) {
                             continue;
                         }
+
                         std::vector<Recipe> combo;
                         for (int i = 0; i < n; ++i) {
                             if (mask & (1 << i)) {
@@ -62,18 +65,7 @@ MealPlan BalancedMealPlanner::generateMealPlan(const std::vector<Recipe>& allRec
                     candidate.selectedRecipes = {b, l, d};
                     candidate.selectedRecipes.insert(candidate.selectedRecipes.end(), snackSet.begin(), snackSet.end());
 
-                    candidate.totalKcal = 0;
-                    candidate.totalProtein = 0;
-                    candidate.totalCarbs = 0;
-                    candidate.totalFats = 0;
-
-                    for (auto& r : candidate.selectedRecipes) {
-                        const auto rWithMacros = NutritionUtils::computeNutritionFromIngredients(r);
-                        candidate.totalKcal += rWithMacros.kcal;
-                        candidate.totalProtein += rWithMacros.protein;
-                        candidate.totalCarbs += rWithMacros.carbs;
-                        candidate.totalFats += rWithMacros.fat;
-                    }
+                    candidate = NutritionCalculator::computeMealPlanNutrition(candidate);
 
                     double score = NutritionUtils::scorePlan(candidate, user);
                     if (score > bestScore) {
