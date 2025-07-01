@@ -20,6 +20,8 @@ add_executable(mealplanner
     src/infrastructure/JsonDataLoader.cpp
     src/core/NutritionUtils.cpp
     src/core/MealPlan.cpp
+    src/core/NutritionCalculator.cpp
+    src/core/IngredientDatabase.cpp
 )
 
 target_include_directories(mealplanner PRIVATE

@@ -7,6 +7,15 @@
 #include <ctime>
 #include <stdexcept>
 
+int popcount(int x) {
+    int count = 0;
+    while (x) {
+        count += x & 1;
+        x >>= 1;
+    }
+    return count;
+}
+
 BalancedMealPlanner::BalancedMealPlanner() {
     std::srand(static_cast<unsigned int>(std::time(nullptr)));
 }
@@ -46,7 +55,7 @@ MealPlan BalancedMealPlanner::generateMealPlan(const std::vector<Recipe>& allRec
                     int n = snacks.size();
                     int limit = 1 << n;
                     for (int mask = 0; mask < limit; ++mask) {
-                        if (__builtin_popcount(mask) != user.snackSlots) {
+                        if (popcount(mask) != user.snackSlots) {
                             continue;
                         }
 

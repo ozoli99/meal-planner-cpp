@@ -3,7 +3,7 @@
 
 #include <vector>
 #include "Recipe.h"
-#include "NutritionUtils.h"
+#include "MacroRatios.h"
 
 struct MealPlan {
     std::vector<Recipe> selectedRecipes;

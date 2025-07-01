@@ -1,17 +1,11 @@
 #ifndef NUTRITION_UTILS_H
 #define NUTRITION_UTILS_H
 
-#include "core/Recipe.h"
-#include "core/MealPlan.h"
-#include "core/UserProfile.h"
+#include "Recipe.h"
+#include "MealPlan.h"
+#include "UserProfile.h"
 #include <vector>
 #include <string>
-
-struct MacroRatios {
-    double protein = 0.0;
-    double carbs = 0.0;
-    double fat = 0.0;
-};
 
 namespace NutritionUtils {
     MacroRatios calculateRatios(int protein, int carbs, int fat, int totalKcal);

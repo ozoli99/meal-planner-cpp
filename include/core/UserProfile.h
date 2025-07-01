@@ -4,7 +4,7 @@
 #include <vector>
 #include <string>
 #include "MealPlan.h"
-#include "NutritionUtils.h"
+#include "MacroRatios.h"
 
 struct UserProfile {
     std::string name;

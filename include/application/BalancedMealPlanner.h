@@ -9,6 +9,8 @@
 
 class BalancedMealPlanner : public IMealPlanner {
 public:
+    BalancedMealPlanner();
+    
     MealPlan generateMealPlan(const std::vector<Recipe>& recipes, const UserProfile& user) override;
 };
 

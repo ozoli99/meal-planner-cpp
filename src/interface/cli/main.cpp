@@ -41,7 +41,10 @@ int main(int argc, char** argv) {
 
     CLI11_PARSE(app, argc, argv);
 
-    JsonDataLoader loader;
+    IngredientDatabase ingredientDb;
+    ingredientDb.loadFromFile("data/ingredients.json");
+
+    JsonDataLoader loader(ingredientDb);
     BalancedMealPlanner planner;
     MealPlannerCLI cli(loader, planner);
     cli.run(userPath, recipePath, planType, verbose, outputPath, format);
