@@ -9,12 +9,12 @@
 
 class MealPlannerCLI {
 public:
-    MealPlannerCLI(IRecipeRepository& recipeRepository, IMealPlanner& planner);
+    MealPlannerCLI(mealplanner::infrastructure::IRecipeRepository& recipeRepository, mealplanner::application::IMealPlanner& planner);
     void run(const std::string& userFile, const std::string& recipesFile, const std::string& planType = "balanced", bool verbose = false, const std::string& outputPath = "", const std::string& format = "text");
     
 private:
-    IRecipeRepository& m_recipeRepository;
-    IMealPlanner& m_planner;
+    mealplanner::infrastructure::IRecipeRepository& m_recipeRepository;
+    mealplanner::application::IMealPlanner& m_planner;
 };
 
 #endif // MEAL_PLANNER_CLI_H

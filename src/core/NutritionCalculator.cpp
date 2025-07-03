@@ -1,6 +1,11 @@
 #include "core/NutritionCalculator.h"
 
-Recipe NutritionCalculator::enrichRecipeWithNutrition(const Recipe& recipe) {
+using namespace mealplanner::model;
+
+NutritionCalculator::NutritionCalculator(const IngredientDatabase& ingredientDatabase)
+    : m_ingredientDatabase(ingredientDatabase) {}
+
+Recipe NutritionCalculator::enrichRecipeWithNutrition(const Recipe& recipe) const {
     Recipe copy = recipe;
     copy.kcal = 0;
     copy.protein = 0;
@@ -8,16 +13,25 @@ Recipe NutritionCalculator::enrichRecipeWithNutrition(const Recipe& recipe) {
     copy.fat = 0;
 
     for (const auto& ingredient : recipe.ingredients) {
-        copy.kcal += ingredient.kcalPerUnit * ingredient.quantity;
-        copy.protein += ingredient.proteinPerUnit * ingredient.quantity;
-        copy.carbs += ingredient.carbsPerUnit * ingredient.quantity;
-        copy.fat += ingredient.fatPerUnit * ingredient.quantity;
+        if (!m_ingredientDatabase.has(ingredient.name)) {
+            continue;
+        }
+
+        const auto& databaseEntry = m_ingredientDatabase.getPerUnitInfo(ingredient.name);
+        
+        double amount = ingredient.quantity.amount;
+        double multiplier = amount / 100.0;
+
+        copy.kcal += static_cast<int>(databaseEntry.kcalPer100g * multiplier + 0.5);
+        copy.protein += static_cast<int>(databaseEntry.proteinPer100g * multiplier + 0.5);
+        copy.carbs += static_cast<int>(databaseEntry.carbsPer100g * multiplier + 0.5);
+        copy.fat += static_cast<int>(databaseEntry.fatPer100g * multiplier + 0.5);
     }
 
     return copy;
 }
 
-MealPlan NutritionCalculator::computeMealPlanNutrition(const MealPlan& plan) {
+MealPlan NutritionCalculator::computeMealPlanNutrition(const MealPlan& plan) const {
     MealPlan enriched = plan;
     enriched.totalKcal = 0;
     enriched.totalProtein = 0;

@@ -1,8 +1,9 @@
 #include <stdexcept>
 #include <CLI/CLI.hpp>
-#include "MealPlannerCLI.h"
+#include "interface/cli/MealPlannerCLI.h"
 #include "infrastructure/JsonDataLoader.h"
 #include "application/BalancedMealPlanner.h"
+
 #ifdef _WIN32
 #include <windows.h>
 #endif
@@ -41,11 +42,12 @@ int main(int argc, char** argv) {
 
     CLI11_PARSE(app, argc, argv);
 
-    IngredientDatabase ingredientDb;
-    ingredientDb.loadFromFile("data/ingredients.json");
+    IngredientDatabase ingredientDatabase;
+    ingredientDatabase.loadFromFile("data/ingredients.json");
 
-    JsonDataLoader loader(ingredientDb);
-    BalancedMealPlanner planner;
+    mealplanner::infrastructure::JsonDataLoader loader{ingredientDatabase};
+    mealplanner::application::BalancedMealPlanner planner{ingredientDatabase};
+    
     MealPlannerCLI cli(loader, planner);
     cli.run(userPath, recipePath, planType, verbose, outputPath, format);
 

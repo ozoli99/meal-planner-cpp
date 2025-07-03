@@ -1,6 +1,8 @@
 #include "interface/presenter/JsonMealPlanFormatter.h"
 #include <nlohmann/json.hpp>
 
+using namespace mealplanner::model;
+
 std::string JsonMealPlanFormatter::format(const MealPlan& plan, bool /*verbose*/) const {
     nlohmann::json j;
 
@@ -11,7 +13,7 @@ std::string JsonMealPlanFormatter::format(const MealPlan& plan, bool /*verbose*/
             {"protein", recipe.protein},
             {"carbs", recipe.carbs},
             {"fat", recipe.fat},
-            {"prep_time_minutes", recipe.prepTimeMinutes},
+            {"prep_time_minutes", recipe.prepTime.count()},
             {"tags", recipe.tags}
         });
     }

@@ -8,9 +8,9 @@
 #include <string>
 
 namespace NutritionUtils {
-    MacroRatios calculateRatios(int protein, int carbs, int fat, int totalKcal);
-    bool isRecipeCompliant(const Recipe& recipe, const std::vector<std::string>& restrictions);
-    double scorePlan(const MealPlan& plan, const UserProfile& user);
+    mealplanner::model::MacroRatios calculateRatios(int protein, int carbs, int fat, int totalKcal);
+    bool isRecipeCompliant(const mealplanner::model::Recipe& recipe, const std::vector<std::string>& restrictions);
+    double scorePlan(const mealplanner::model::MealPlan& plan, const mealplanner::model::UserProfile& user);
 }
 
 #endif // NUTRITION_UTILS_H

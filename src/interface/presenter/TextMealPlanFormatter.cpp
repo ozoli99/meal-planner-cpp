@@ -1,9 +1,11 @@
 #include "interface/presenter/TextMealPlanFormatter.h"
 #include <sstream>
 
+using namespace mealplanner::model;
+
 std::string TextMealPlanFormatter::format(const MealPlan& plan, bool verbose) const {
     std::ostringstream oss;
-    oss << "\n📅 Meal Plan\n" << std::string(40, '─') << "\n";
+    oss << "\n📅 Meal Plan\n" << std::string(40, '-') << "\n";
 
     for (const auto& recipe : plan.selectedRecipes) {
         oss << "🍽️  " << recipe.name << " (" << recipe.kcal << " kcal)"
@@ -11,12 +13,12 @@ std::string TextMealPlanFormatter::format(const MealPlan& plan, bool verbose) co
             << " C: " << recipe.carbs << "g"
             << " F: " << recipe.fat << "g";
         if (verbose) {
-            oss << " | ⏱️ " << recipe.prepTimeMinutes << " min";
+            oss << " | ⏱️ " << recipe.prepTime.count() << " min";
         }
         oss << "\n";
     }
 
-    oss << std::string(40, '─') << "\n";
+    oss << std::string(40, '-') << "\n";
     oss << "Total: " << plan.totalKcal << " kcal | "
         << "Protein: " << plan.totalProtein << "g | "
         << "Carbs: " << plan.totalCarbs << "g | "

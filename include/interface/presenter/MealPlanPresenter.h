@@ -8,8 +8,8 @@
 
 class MealPlanPresenter {
 public:
-    static void PrintToConsole(const MealPlan& plan, const std::string& format = "text", bool verbose = false);
-    static void ExportToFile(const MealPlan& plan, const std::string& path, const std::string& format = "text", bool verbose = false);
+    static void PrintToConsole(const mealplanner::model::MealPlan& plan, const std::string& format = "text", bool verbose = false);
+    static void ExportToFile(const mealplanner::model::MealPlan& plan, const std::string& path, const std::string& format = "text", bool verbose = false);
 
 private:
     static std::unique_ptr<IMealPlanFormatter> createFormatter(const std::string& format = "text");

@@ -2,15 +2,19 @@
 #define INGREDIENT_H
 
 #include <string>
+#include <vector>
+#include <unordered_map>
+#include "Quantity.h"
 
-struct Ingredient {
-    std::string name;
-    double quantity;
-    std::string unit;
-    double kcalPerUnit = 0.0;
-    double proteinPerUnit = 0.0;
-    double carbsPerUnit = 0.0;
-    double fatPerUnit = 0.0;
-};
+namespace mealplanner::model {
+    /**
+     * @brief Represents an ingredient used in a specific recipe (with quantity and optional note).
+     */
+    struct Ingredient {
+        std::string name;      ///< Ingredient name to match database.
+        Quantity quantity;     ///< Amount to use.
+        bool optional = false; ///< If true, this ingredient can be skipped.
+    };
+}
 
 #endif // INGREDIENT_H

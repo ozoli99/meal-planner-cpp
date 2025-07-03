@@ -3,6 +3,8 @@
 #include "core/UserProfile.h"
 #include <algorithm>
 
+using namespace mealplanner::model;
+
 MacroRatios NutritionUtils::calculateRatios(int protein, int carbs, int fat, int totalKcal) {
     if (totalKcal == 0) {
         return {};

@@ -3,13 +3,17 @@
 
 #include "core/Recipe.h"
 #include "core/MealPlan.h"
+#include "core/IngredientDatabase.h"
 
 class NutritionCalculator {
 public:
-    // Computes and fills kcal, protein, carbs, fat fields based on ingredients
-    static Recipe enrichRecipeWithNutrition(const Recipe& recipe);
-    // Sums total macros for all selected recipes
-    static MealPlan computeMealPlanNutrition(const MealPlan& plan);
+    explicit NutritionCalculator(const IngredientDatabase& ingredientDatabase);
+
+    mealplanner::model::Recipe enrichRecipeWithNutrition(const mealplanner::model::Recipe& recipe) const;
+    mealplanner::model::MealPlan computeMealPlanNutrition(const mealplanner::model::MealPlan& plan) const;
+
+private:
+    const IngredientDatabase& m_ingredientDatabase;
 };
 
 #endif // NUTRITION_CALCULATOR_H

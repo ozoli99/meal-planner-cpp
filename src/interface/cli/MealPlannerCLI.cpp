@@ -2,6 +2,11 @@
 #include "interface/presenter/MealPlanPresenter.h"
 #include "infrastructure/JsonDataLoader.h"
 #include <iostream>
+#include <stdexcept>
+
+using namespace mealplanner::model;
+using namespace mealplanner::application;
+using namespace mealplanner::infrastructure;
 
 MealPlannerCLI::MealPlannerCLI(IRecipeRepository& recipeRepository, IMealPlanner& planner)
     : m_recipeRepository(recipeRepository)
@@ -9,6 +14,9 @@ MealPlannerCLI::MealPlannerCLI(IRecipeRepository& recipeRepository, IMealPlanner
 
 void MealPlannerCLI::run(const std::string& userFile, const std::string& recipeFile, const std::string& planType, bool verbose, const std::string& outputPath, const std::string& format) {
     try {
+        if (planType != "balanced") {
+            throw std::runtime_error("Only 'balanced' plan is supported for now");
+        }
         UserProfile user = m_recipeRepository.loadUserProfile(userFile);
         std::vector<Recipe> recipes = m_recipeRepository.loadRecipes(recipeFile);
 

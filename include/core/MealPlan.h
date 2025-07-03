@@ -5,14 +5,16 @@
 #include "Recipe.h"
 #include "MacroRatios.h"
 
-struct MealPlan {
-    std::vector<Recipe> selectedRecipes;
-    int totalKcal = 0;
-    int totalProtein = 0;
-    int totalCarbs = 0;
-    int totalFats = 0;
-
-    MacroRatios GetRatios() const;
-};
+namespace mealplanner::model {
+    struct MealPlan {
+        std::vector<Recipe> selectedRecipes;
+        int totalKcal = 0;
+        int totalProtein = 0;
+        int totalCarbs = 0;
+        int totalFats = 0;
+    
+        MacroRatios GetRatios() const;
+    };
+}
 
 #endif // MEAL_PLAN_H

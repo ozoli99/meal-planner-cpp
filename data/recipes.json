@@ -1,61 +1,215 @@
 [
     {
         "id": "r1",
-        "name": "Oatmeal with Berries",
-        "type": "breakfast",
-        "prep_time_minutes": 5,
-        "tags": ["vegetarian", "nut_free"],
+        "name": "Banana Oat Breakfast Muffins",
+        "description": "Overripe bananas may be too brown to eat, but they're perfect for our sweet breakfast muffins. With their sticky consistency and sweetness, you can turn boring muffins into delicious power snacks! If you're looking for a fruity kick, try mixing in some blueberries too.",
+
+        "prep_time_minutes": 10,
+        "cook_time_minutes": 20,
+        "rest_time_minutes": 0,
+        "servings": 12,
+
         "ingredients": [
             {
                 "name": "oats",
-                "quantity": 50,
-                "unit": "g"
+                "quantity": 105,
+                "unit": "g",
+                "optional": false
             },
             {
-                "name": "blueberries",
-                "quantity": 100,
-                "unit": "g"
+                "name": "bananas",
+                "quantity": 225,
+                "unit": "g",
+                "optional": false,
+                "note": "mashed"
+            },
+            {
+                "name": "eggs",
+                "quantity": 2,
+                "unit": "piece",
+                "optional": false
+            },
+            {
+                "name": "honey",
+                "quantity": 50,
+                "unit": "g",
+                "optional": false
+            },
+            {
+                "name": "baking powder",
+                "quantity": 4,
+                "unit": "g",
+                "optional": false
+            },
+            {
+                "name": "baking soda",
+                "quantity": 3,
+                "unit": "g",
+                "optional": false
+            },
+            {
+                "name": "salt",
+                "optional": true,
+                "note": "to taste"
+            },
+            {
+                "name": "cinnamon",
+                "optional": true,
+                "note": "to taste"
             },
             {
                 "name": "almond milk",
-                "quantity": 200,
-                "unit": "ml"
+                "quantity": 50,
+                "unit": "ml",
+                "optional": false
             }
-        ]
+        ],
+
+        "instructions": [
+            "Fill a half a cup with the oats and set to the side. Pour the remaining oats into a food processor and finely chop until they have the texture of flour.",
+            "Mash the bananas with a fork or use the food processor to do so.",
+            "Mix the chopped oats, mashed bananas, eggs, honey, almond milk, baking powder and baking soda together. Then, lightly season with salt and cinnamon.",
+            "Add the oat flakes that were previously set aside (except for a small amount). Divide the batter evenly among the cups of a muffin tin and sprinkle the remaining oats on top of each.",
+            "Place the muffins in the oven at 175°C / 350°F for approx. 20 minutes.",
+            "Enjoy!"
+        ],
+
+        "tags": [
+            "breakfast",
+            "dessert",
+            "fruits",
+            "lactose_free",
+            "low_fat",
+            "on_the_go",
+            "pescetarian",
+            "snack",
+            "sweet",
+            "vegetarian"
+        ],
+        "allergens": ["eggs", "tree_nuts"],
+        "equipment": [
+            { "name": "bowl", "optional": false },
+            { "name": "fork", "optional": false },
+            { "name": "muffin tin", "optional": false },
+            { "name": "oven", "optional": false },
+            { "name": "food processor", "optional": true }
+        ],
+
+        "cuisine": "American",
+        "difficulty": "easy",
+        "cost": { "value": 2.5, "currency": "EUR" },
+        "batch-friendly": true,
+        "prep_ahead_possible": true,
+        "expiration_day": 3,
+        "suitable_for_goals": ["maintenance", "weight_loss"],
+        "required_skills": ["baking", "mixing"],
+
+        "image_url": "",
+        "source_url": "",
+        "author": ""
     },
     {
         "id": "r2",
-        "name": "Quinoa Chickpea Salad",
-        "type": "lunch",
-        "kcal": 600,
-        "protein": 20,
-        "carbs": 70,
-        "fat": 20,
-        "prep_time_minutes": 15,
-        "tags": ["vegetarian", "nut_free"]
-    },
-    {
-        "id": "r3",
-        "name": "Tofu Stir-fry",
-        "type": "dinner",
-        "prep_time_minutes": 20,
-        "tags": ["vegetarian"],
+        "name": "Tomato Sandwich with Egg Salad",
+        "description": "Our crispy tomato sandwich with homemade egg salad is the perfect takeaway breakfast. Thickly prepared, it will keep you feeling full while keeping the calorie count within the limits.",
+
+        "prep_time_minutes": 7,
+        "cook_time_minutes": 8,
+        "rest_time_minutes": 0,
+        "servings": 2,
+
         "ingredients": [
             {
-                "name": "tofu",
-                "quantity": 150,
-                "unit": "g"
+                "name": "capers",
+                "quantity": 1,
+                "unit": "tbsp",
+                "optional": false
             },
             {
-                "name": "broccoli",
+                "name": "tomatoes",
+                "quantity": 2,
+                "unit": "piece",
+                "optional": false,
+                "note": ""
+            },
+            {
+                "name": "eggs",
+                "quantity": 1,
+                "unit": "piece",
+                "optional": false
+            },
+            {
+                "name": "greek yogurt",
                 "quantity": 100,
-                "unit": "g"
+                "unit": "g",
+                "optional": false
             },
             {
-                "name": "soy sauce",
-                "quantity": 15,
-                "unit": "ml"
+                "name": "lettuce",
+                "quantity": 25,
+                "unit": "g",
+                "optional": false
+            },
+            {
+                "name": "whole wheat bread",
+                "quantity": 4,
+                "unit": "slice",
+                "optional": false,
+                "note": "sliced"
+            },
+            {
+                "name": "salt",
+                "optional": true,
+                "note": "to taste"
+            },
+            {
+                "name": "pepper",
+                "optional": true,
+                "note": "to taste"
+            },
+            {
+                "name": "basil",
+                "optional": true,
+                "note": "to taste"
             }
-        ]
+        ],
+
+        "instructions": [
+            "For the egg salad, boil the egg in a pot for 8 minutes.",
+            "In the meantime, finely chop the capers and cut the tomatoes into slices.",
+            "Remove the egg from the pot, hold under cold water, peel and cut into small pieces.",
+            "In a bowl, beat the egg together with the capers, yogurt and salt and pepper into a creamy egg salad.",
+            "Put the bread in the toaster and toast until golden brown.",
+            "Put the egg salad, lettuce, tomatoes and basil on the bread, lay another piece of bread over the top and cut in half with a knife.",
+            "Enjoy!"
+        ],
+
+        "tags": [
+            "breakfast",
+            "clean_eating",
+            "low_fat",
+            "pescetarian",
+            "snack",
+            "vegetarian"
+        ],
+        "allergens": ["eggs"],
+        "equipment": [
+            { "name": "bowl", "optional": false },
+            { "name": "fork", "optional": false },
+            { "name": "oven", "optional": false }
+        ],
+
+        "cuisine": "American",
+        "difficulty": "easy",
+        "cost": { "value": 2.5, "currency": "EUR" },
+        "batch-friendly": true,
+        "prep_ahead_possible": true,
+        "expiration_day": 3,
+        "suitable_for_goals": ["maintenance", "weight_loss"],
+        "required_skills": ["boiling", "mixing"],
+
+        "image_url": "",
+        "source_url": "",
+        "author": ""
     }
 ]

@@ -1,5 +1,7 @@
-#include "../../include/interface/presenter/MarkdownMealPlanFormatter.h"
+#include "interface/presenter/MarkdownMealPlanFormatter.h"
 #include <sstream>
+
+using namespace mealplanner::model;
 
 std::string MarkdownMealPlanFormatter::format(const MealPlan& plan, bool verbose) const {
     std::ostringstream out;
@@ -11,7 +13,7 @@ std::string MarkdownMealPlanFormatter::format(const MealPlan& plan, bool verbose
         out << "- **Kcal:** " << recipe.kcal << "\n";
         out << "- **Macros:** P: " << recipe.protein << "g, C: " << recipe.carbs << "g, F: " << recipe.fat << "g\n";
         if (verbose) {
-            out << "- **Prep Time:** " << recipe.prepTimeMinutes << " min\n";
+            out << "- **Prep Time:** " << recipe.prepTime.count() << " min\n";
         }
         if (!recipe.tags.empty()) {
             out << "- **Tags:** ";

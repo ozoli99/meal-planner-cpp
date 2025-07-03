@@ -6,12 +6,14 @@
 #include "core/Recipe.h"
 #include "core/UserProfile.h"
 
-class IRecipeRepository {
-public:
-    virtual ~IRecipeRepository() = default;
-    
-    virtual std::vector<Recipe> loadRecipes(const std::string& path) = 0;
-    virtual UserProfile loadUserProfile(const std::string& path) = 0;
-};
+namespace mealplanner::infrastructure {
+    class IRecipeRepository {
+    public:
+        virtual ~IRecipeRepository() = default;
+        
+        virtual std::vector<model::Recipe> loadRecipes(const std::string& path) = 0;
+        virtual model::UserProfile loadUserProfile(const std::string& path) = 0;
+    };
+}
 
 #endif // I_RECIPE_REPOSITORY_H

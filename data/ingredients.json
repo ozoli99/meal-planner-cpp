@@ -1,7 +1,9 @@
 [
     {
         "name": "almond milk",
-        "kcal_per_100g": 19,
+        "quantity": 100,
+        "unit": "g",
+        "kcalPerUnit": 19,
         "protein_per_100g": 0.7,
         "carbs_per_100g": 0.7,
         "fat_per_100g": 1.6

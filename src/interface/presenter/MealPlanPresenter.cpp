@@ -5,6 +5,8 @@
 #include <iostream>
 #include <fstream>
 
+using namespace mealplanner::model;
+
 void MealPlanPresenter::PrintToConsole(const MealPlan& plan, const std::string& format, bool verbose) {
     auto formatter = createFormatter(format);
     if (!formatter) {

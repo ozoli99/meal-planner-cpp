@@ -7,79 +7,97 @@
 #include <ctime>
 #include <stdexcept>
 
-int popcount(int x) {
-    int count = 0;
-    while (x) {
-        count += x & 1;
-        x >>= 1;
-    }
-    return count;
-}
+using namespace mealplanner::application;
+using namespace mealplanner::model;
 
-BalancedMealPlanner::BalancedMealPlanner() {
+namespace {
+    int countSetBits(int value) {
+        int count = 0;
+        while (value) {
+            count += value & 1;
+            value >>= 1;
+        }
+        return count;
+    }
+    
+    bool recipeHasTag(const Recipe& recipe, const std::string& tag) {
+        return std::find(recipe.tags.begin(), recipe.tags.end(), tag) != recipe.tags.end();
+    }
+
+    std::vector<std::vector<Recipe>> generateSnackCombinations(const std::vector<Recipe>& snacks, int slots) {
+        std::vector<std::vector<Recipe>> combinations;
+
+        int snackCount = static_cast<int>(snacks.size());
+        int totalMasks = 1 << snackCount;
+
+        for (int mask = 0; mask < totalMasks; ++mask) {
+            if (countSetBits(mask) != slots) {
+                continue;
+            }
+
+            std::vector<Recipe> combo;
+            for (int i = 0; i < snackCount; ++i) {
+                if (mask & (1 << i)) {
+                    combo.push_back(snacks[i]);
+                }
+            }
+            combinations.push_back(combo);
+        }
+
+        return combinations;
+    }
+} // namespace
+
+BalancedMealPlanner::BalancedMealPlanner(const IngredientDatabase& ingredientDatabase)
+    : m_ingredientDatabase(ingredientDatabase) {
     std::srand(static_cast<unsigned int>(std::time(nullptr)));
 }
 
-MealPlan BalancedMealPlanner::generateMealPlan(const std::vector<Recipe>& allRecipes, const UserProfile& user) {
-    std::vector<Recipe> breakfasts;
-    std::vector<Recipe> lunches;
-    std::vector<Recipe> dinners;
-    std::vector<Recipe> snacks;
+MealPlan BalancedMealPlanner::generateMealPlan(const std::vector<Recipe>& recipes, const UserProfile& user) {
+    std::vector<Recipe> breakfastOptions;
+    std::vector<Recipe> lunchOptions;
+    std::vector<Recipe> dinnerOptions;
+    std::vector<Recipe> snackOptions;
 
-    for (const auto& r : allRecipes) {
-        if (!NutritionUtils::isRecipeCompliant(r, user.dietaryRestrictions) || r.prepTimeMinutes > user.maxPrepTimeMinutes) {
+    for (const auto& recipe : recipes) {
+        if (!NutritionUtils::isRecipeCompliant(recipe, user.dietaryRestrictions) || recipe.prepTime > user.maxPrepTime) {
             continue;
         }
 
-        if (r.type == "breakfast") {
-            breakfasts.push_back(r);
-        } else if (r.type == "lunch") {
-            lunches.push_back(r);
-        } else if (r.type == "dinner") {
-            dinners.push_back(r);
-        } else if (r.type == "snack") {
-            snacks.push_back(r);
+        if (recipeHasTag(recipe, "breakfast")) {
+            breakfastOptions.push_back(recipe);
+        } else if (recipeHasTag(recipe, "lunch")) {
+            lunchOptions.push_back(recipe);
+        } else if (recipeHasTag(recipe, "dinner")) {
+            dinnerOptions.push_back(recipe);
+        } else if (recipeHasTag(recipe, "snack")) {
+            snackOptions.push_back(recipe);
         }
     }
 
     MealPlan bestPlan;
-    double bestScore = -1e9;
+    double highestScore = -1e9;
 
-    for (const auto& b : breakfasts) {
-        for (const auto& l : lunches) {
-            for (const auto& d : dinners) {
-                std::vector<std::vector<Recipe>> snackCombos = {{}};
+    NutritionCalculator calculator(m_ingredientDatabase);
 
-                if (user.snackSlots > 0 && !snacks.empty()) {
-                    snackCombos.clear();
-                    int n = snacks.size();
-                    int limit = 1 << n;
-                    for (int mask = 0; mask < limit; ++mask) {
-                        if (popcount(mask) != user.snackSlots) {
-                            continue;
-                        }
+    for (const auto& breakfast : breakfastOptions) {
+        for (const auto& lunch : lunchOptions) {
+            for (const auto& dinner : dinnerOptions) {
+                std::vector<std::vector<Recipe>> snackCombinations = (user.snackSlots > 0 && !snackOptions.empty())
+                    ? generateSnackCombinations(snackOptions, user.snackSlots)
+                    : std::vector<std::vector<Recipe>>{{}};
 
-                        std::vector<Recipe> combo;
-                        for (int i = 0; i < n; ++i) {
-                            if (mask & (1 << i)) {
-                                combo.push_back(snacks[i]);
-                            }
-                        }
-                        snackCombos.push_back(combo);
-                    }
-                }
+                for (const auto& snackSet : snackCombinations) {
+                    MealPlan candidatePlan;
+                    candidatePlan.selectedRecipes = {breakfast, lunch, dinner};
+                    candidatePlan.selectedRecipes.insert(candidatePlan.selectedRecipes.end(), snackSet.begin(), snackSet.end());
 
-                for (const auto& snackSet : snackCombos) {
-                    MealPlan candidate;
-                    candidate.selectedRecipes = {b, l, d};
-                    candidate.selectedRecipes.insert(candidate.selectedRecipes.end(), snackSet.begin(), snackSet.end());
+                    candidatePlan = calculator.computeMealPlanNutrition(candidatePlan);
+                    double planScore = NutritionUtils::scorePlan(candidatePlan, user);
 
-                    candidate = NutritionCalculator::computeMealPlanNutrition(candidate);
-
-                    double score = NutritionUtils::scorePlan(candidate, user);
-                    if (score > bestScore) {
-                        bestScore = score;
-                        bestPlan = candidate;
+                    if (planScore > highestScore) {
+                        highestScore = planScore;
+                        bestPlan = candidatePlan;
                     }
                 }
             }
