@@ -8,6 +8,10 @@
 using namespace mealplanner::model;
 
 void MealPlanPresenter::PrintToConsole(const MealPlan& plan, const std::string& format, bool verbose) {
+    if (plan.selectedRecipes.empty()) {
+        std::cerr << "⚠️  Warning: Meal plan is empty. Nothing to display.\n";
+        return;
+    }
     auto formatter = createFormatter(format);
     if (!formatter) {
         std::cerr << "❌ Unknown format: " << format << "\n";
@@ -17,6 +21,10 @@ void MealPlanPresenter::PrintToConsole(const MealPlan& plan, const std::string& 
 }
 
 void MealPlanPresenter::ExportToFile(const MealPlan& plan, const std::string& path, const std::string& format, bool verbose) {
+    if (plan.selectedRecipes.empty()) {
+        std::cerr << "⚠️  Warning: Meal plan is empty. Nothing to export.\n";
+        return;
+    }
     auto formatter = createFormatter(format);
     if (!formatter) {
         std::cerr << "❌ Unknown format: " << format << "\n";

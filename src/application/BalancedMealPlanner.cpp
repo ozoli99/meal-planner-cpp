@@ -53,7 +53,7 @@ BalancedMealPlanner::BalancedMealPlanner(const IngredientDatabase& ingredientDat
     std::srand(static_cast<unsigned int>(std::time(nullptr)));
 }
 
-MealPlan BalancedMealPlanner::generateMealPlan(const std::vector<Recipe>& recipes, const UserProfile& user) {
+std::optional<MealPlan> BalancedMealPlanner::generateMealPlan(const std::vector<Recipe>& recipes, const UserProfile& user) {
     std::vector<Recipe> breakfastOptions;
     std::vector<Recipe> lunchOptions;
     std::vector<Recipe> dinnerOptions;
@@ -77,6 +77,7 @@ MealPlan BalancedMealPlanner::generateMealPlan(const std::vector<Recipe>& recipe
 
     MealPlan bestPlan;
     double highestScore = -1e9;
+    bool found = false;
 
     NutritionCalculator calculator(m_ingredientDatabase);
 
@@ -95,14 +96,19 @@ MealPlan BalancedMealPlanner::generateMealPlan(const std::vector<Recipe>& recipe
                     candidatePlan = calculator.computeMealPlanNutrition(candidatePlan);
                     double planScore = NutritionUtils::scorePlan(candidatePlan, user);
 
-                    if (planScore > highestScore) {
+                    if (!found || planScore > highestScore) {
                         highestScore = planScore;
                         bestPlan = candidatePlan;
+                        found = true;
                     }
                 }
             }
         }
     }
 
-    return bestPlan;
+    if (found) {
+        return bestPlan;
+    } else {
+        return std::nullopt;
+    }
 }

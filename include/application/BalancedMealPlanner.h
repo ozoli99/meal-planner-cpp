@@ -17,7 +17,13 @@ namespace mealplanner::application {
     public:
         explicit BalancedMealPlanner(const IngredientDatabase& ingredientDatabase);
     
-        model::MealPlan generateMealPlan(const std::vector<model::Recipe>& recipes, const model::UserProfile& user) override;
+        /**
+         * @brief Generate a meal plan for a user from a set of recipes.
+         * @param recipes The list of available recipes to choose from.
+         * @param user The user profile containing preferences, restrictions, and health data.
+         * @return An optional MealPlan; std::nullopt if no valid plan can be generated.
+         */
+        std::optional<model::MealPlan> generateMealPlan(const std::vector<model::Recipe>& recipes, const model::UserProfile& user) override;
     
     private:
         const IngredientDatabase& m_ingredientDatabase;
