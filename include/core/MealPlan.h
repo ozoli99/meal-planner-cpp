@@ -8,10 +8,10 @@
 namespace mealplanner::model {
     struct MealPlan {
         std::vector<Recipe> selectedRecipes;
-        int totalKcal = 0;
-        int totalProtein = 0;
-        int totalCarbs = 0;
-        int totalFats = 0;
+        Calories totalKcal = Calories{0};
+        Grams totalProtein = Grams{0};
+        Grams totalCarbs = Grams{0};
+        Grams totalFats = Grams{0};
     
         MacroRatios GetRatios() const;
     };

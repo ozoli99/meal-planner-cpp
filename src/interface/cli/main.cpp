@@ -42,12 +42,12 @@ int main(int argc, char** argv) {
 
     CLI11_PARSE(app, argc, argv);
 
-    IngredientDatabase ingredientDatabase;
+    mealplanner::model::IngredientDatabase ingredientDatabase;
     ingredientDatabase.loadFromFile("data/ingredients.json");
 
     mealplanner::infrastructure::JsonDataLoader loader{ingredientDatabase};
     mealplanner::application::BalancedMealPlanner planner{ingredientDatabase};
-    
+
     MealPlannerCLI cli(loader, planner);
     cli.run(userPath, recipePath, planType, verbose, outputPath, format);
 

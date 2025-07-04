@@ -8,20 +8,33 @@ namespace mealplanner::model {
     enum class Difficulty {
         Easy,
         Intermediate,
-        Hard
+        Hard,
+        Unknown
     };
 
-    inline std::optional<Difficulty> difficultyFromString(const std::string& str) {
-        if (str == "easy") {
-            return Difficulty::Easy;
+    inline std::string toString(Difficulty difficulty) {
+        switch (difficulty) {
+            case Difficulty::Easy: return "easy";
+            case Difficulty::Intermediate: return "intermediate";
+            case Difficulty::Hard: return "hard";
+            default: return "unknown";
         }
-        if (str == "intermediate") {
-            return Difficulty::Intermediate;
+    }
+
+    inline Difficulty difficultyFromString(const std::string& str) {
+        std::string lower;
+        lower.reserve(str.size());
+        for (char c : str) {
+            lower += static_cast<char>(std::tolower(static_cast<unsigned char>(c)));
         }
-        if (str == "hard") {
-            return Difficulty::Hard;
-        }
-        return std::nullopt;
+        if (lower == "easy") return Difficulty::Easy;
+        if (lower == "intermediate") return Difficulty::Intermediate;
+        if (lower == "hard") return Difficulty::Hard;
+        return Difficulty::Unknown;
+    }
+
+    inline bool isKnownDifficulty(const std::string& str) {
+        return difficultyFromString(str) != Difficulty::Unknown;
     }
 }
 

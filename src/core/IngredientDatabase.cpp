@@ -1,9 +1,11 @@
 #include "core/IngredientDatabase.h"
+#include "core/IngredientDatabaseEntry.h"
 #include <nlohmann/json.hpp>
 #include <fstream>
 #include <stdexcept>
 
 using json = nlohmann::json;
+using namespace mealplanner::model;
 
 void IngredientDatabase::loadFromFile(const std::string& path) {
     std::ifstream file(path);
@@ -15,24 +17,35 @@ void IngredientDatabase::loadFromFile(const std::string& path) {
     file >> data;
 
     for (const auto& entry : data) {
-        IngredientDatabaseEntry ingredient;
-        ingredient.name = entry.at("name").get<std::string>();
-        ingredient.kcalPer100g = entry.value("kcal_per_100g", 0.0);
-        ingredient.proteinPer100g = entry.value("protein_per_100g", 0.0);
-        ingredient.carbsPer100g = entry.value("carbs_per_100g", 0.0);
-        ingredient.fatPer100g = entry.value("fat_per_100g", 0.0);
+        auto name = entry.at("name").get<std::string>();
+        auto defaultUnit = entry.value("unit", "g");
+        double kcalPer100g = entry.value("kcal_per_100g", 0.0);
+        double proteinPer100g = entry.value("protein_per_100g", 0.0);
+        double carbsPer100g = entry.value("carbs_per_100g", 0.0);
+        double fatPer100g = entry.value("fat_per_100g", 0.0);
+        auto form = entry.value("form", "");
+        auto category = entry.value("category", "");
 
-        ingredient.defaultUnit = entry.value("unit", "g");
-        ingredient.category = entry.value("category", "");
-
-        if (entry.contains("tags")) {
-            ingredient.tags = entry["tags"].get<std::vector<std::string>>();
+        std::optional<std::string> brand;
+        if (entry.contains("brand")) {
+            brand = entry["brand"].get<std::string>();
         }
+        
+        auto tags = entry.value("tags", std::vector<std::string>{});
+        auto substitutions = entry.value("substitutions", std::unordered_map<std::string, std::string>{});
+        
+        Unit unit = unitFromString(defaultUnit);
+        Calories kcal{static_cast<int>(kcalPer100g + 0.5)};
+        Grams protein{static_cast<int>(proteinPer100g + 0.5)};
+        Grams carbs{static_cast<int>(carbsPer100g + 0.5)};
+        Grams fat{static_cast<int>(fatPer100g + 0.5)};
 
-        if (entry.contains("substitutions")) {
-            ingredient.substitutions = entry["substitutions"].get<std::unordered_map<std::string, std::string>>();
-        }
-        m_ingredients[ingredient.name] = std::move(ingredient);
+        IngredientDatabaseEntry ingredient(
+            std::move(name), unit, kcal, protein, carbs, fat,
+            std::move(form), std::move(category), std::move(brand), std::move(tags), std::move(substitutions)
+        );
+
+        m_ingredients.emplace(ingredient.GetName(), std::move(ingredient));
     }
 }
 
@@ -40,10 +53,10 @@ bool IngredientDatabase::has(const std::string& name) const {
     return m_ingredients.find(name) != m_ingredients.end();
 }
 
-IngredientDatabaseEntry IngredientDatabase::getPerUnitInfo(const std::string& name) const {
+std::optional<IngredientDatabaseEntry> IngredientDatabase::getPerUnitInfo(const std::string& name) const {
     auto it = m_ingredients.find(name);
     if (it == m_ingredients.end()) {
-        throw std::runtime_error("Ingredient not found in database: " + name);
+        return std::nullopt;
     }
     return it->second;
 }

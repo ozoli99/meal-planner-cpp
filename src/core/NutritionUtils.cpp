@@ -5,15 +5,14 @@
 
 using namespace mealplanner::model;
 
-MacroRatios NutritionUtils::calculateRatios(int protein, int carbs, int fat, int totalKcal) {
-    if (totalKcal == 0) {
+MacroRatios NutritionUtils::calculateRatios(Grams protein, Grams carbs, Grams fat, Calories totalKcal) {
+    if (totalKcal.value == 0) {
         return {};
     }
-
     return {
-        (protein * 4.0) / totalKcal,
-        (carbs * 4.0) / totalKcal,
-        (fat * 9.0) / totalKcal
+        (protein.value * 4.0) / totalKcal.value,
+        (carbs.value * 4.0) / totalKcal.value,
+        (fat.value * 9.0) / totalKcal.value
     };
 }
 

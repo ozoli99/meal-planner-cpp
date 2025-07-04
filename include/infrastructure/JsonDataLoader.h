@@ -11,13 +11,13 @@
 namespace mealplanner::infrastructure {
     class JsonDataLoader : public IRecipeRepository {
     public:
-        explicit JsonDataLoader(const IngredientDatabase& ingredientDatabase);
+        explicit JsonDataLoader(const model::IngredientDatabase& ingredientDatabase);
     
         std::vector<model::Recipe> loadRecipes(const std::string& path) override;
         model::UserProfile loadUserProfile(const std::string& path) override;
     
     private:
-        const IngredientDatabase& m_ingredientDatabase;
+        const model::IngredientDatabase& m_ingredientDatabase;
     };
 }
 

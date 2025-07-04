@@ -8,7 +8,11 @@
 #include <string>
 
 namespace NutritionUtils {
-    mealplanner::model::MacroRatios calculateRatios(int protein, int carbs, int fat, int totalKcal);
+    mealplanner::model::MacroRatios calculateRatios(
+        mealplanner::model::Grams protein,
+        mealplanner::model::Grams carbs,
+        mealplanner::model::Grams fat,
+        mealplanner::model::Calories totalKcal);
     bool isRecipeCompliant(const mealplanner::model::Recipe& recipe, const std::vector<std::string>& restrictions);
     double scorePlan(const mealplanner::model::MealPlan& plan, const mealplanner::model::UserProfile& user);
 }

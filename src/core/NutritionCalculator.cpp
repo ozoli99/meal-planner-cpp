@@ -7,25 +7,31 @@ NutritionCalculator::NutritionCalculator(const IngredientDatabase& ingredientDat
 
 Recipe NutritionCalculator::enrichRecipeWithNutrition(const Recipe& recipe) const {
     Recipe copy = recipe;
-    copy.kcal = 0;
-    copy.protein = 0;
-    copy.carbs = 0;
-    copy.fat = 0;
+    copy.kcal = Calories(0);
+    copy.protein = Grams{0};
+    copy.carbs = Grams{0};
+    copy.fat = Grams{0};
 
     for (const auto& ingredient : recipe.ingredients) {
-        if (!m_ingredientDatabase.has(ingredient.name)) {
+        auto opt = m_ingredientDatabase.getPerUnitInfo(ingredient.name);
+        if (!opt) {
             continue;
         }
 
-        const auto& databaseEntry = m_ingredientDatabase.getPerUnitInfo(ingredient.name);
+        const auto& databaseEntry = *opt;
         
         double amount = ingredient.quantity.amount;
         double multiplier = amount / 100.0;
 
-        copy.kcal += static_cast<int>(databaseEntry.kcalPer100g * multiplier + 0.5);
-        copy.protein += static_cast<int>(databaseEntry.proteinPer100g * multiplier + 0.5);
-        copy.carbs += static_cast<int>(databaseEntry.carbsPer100g * multiplier + 0.5);
-        copy.fat += static_cast<int>(databaseEntry.fatPer100g * multiplier + 0.5);
+        int kcalDelta = static_cast<int>(databaseEntry.GetKcalPer100g().value * multiplier + 0.5);
+        int proteinDelta = static_cast<int>(databaseEntry.GetProteinPer100g().value * multiplier + 0.5);
+        int carbsDelta = static_cast<int>(databaseEntry.GetCarbsPer100g().value * multiplier + 0.5);
+        int fatDelta = static_cast<int>(databaseEntry.GetFatPer100g().value * multiplier + 0.5);
+
+        copy.kcal += Calories{kcalDelta};
+        copy.protein += Grams{proteinDelta};
+        copy.carbs += Grams{carbsDelta};
+        copy.fat += Grams{fatDelta};
     }
 
     return copy;
@@ -33,10 +39,10 @@ Recipe NutritionCalculator::enrichRecipeWithNutrition(const Recipe& recipe) cons
 
 MealPlan NutritionCalculator::computeMealPlanNutrition(const MealPlan& plan) const {
     MealPlan enriched = plan;
-    enriched.totalKcal = 0;
-    enriched.totalProtein = 0;
-    enriched.totalCarbs = 0;
-    enriched.totalFats = 0;
+    enriched.totalKcal = Calories{0};
+    enriched.totalProtein = Grams{0};
+    enriched.totalCarbs = Grams{0};
+    enriched.totalFats = Grams{0};
 
     for (const auto& recipe : plan.selectedRecipes) {
         auto r = enrichRecipeWithNutrition(recipe);

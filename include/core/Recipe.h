@@ -6,6 +6,7 @@
 #include <optional>
 #include <stdexcept>
 
+#include "NutritionUnits.h"
 #include "Ingredient.h"
 #include "Equipment.h"
 #include "Cost.h"
@@ -28,7 +29,7 @@ namespace mealplanner::model {
         Minutes prepTime = Minutes{0}; ///< Preparation time (excluding cooking).
         Minutes cookTime = Minutes{0}; ///< Cooking time.
         Minutes restTime = Minutes{0}; ///< Optional rest time (e.g., for dough).
-        int servings = 1;              ///< Number of servings the recipe yields.
+        Servings servings = Servings{1}; ///< Number of servings the recipe yields.
     
         // Recipe content
         std::vector<Ingredient> ingredients; ///< List of ingredients with amounts and macros.
@@ -40,10 +41,10 @@ namespace mealplanner::model {
         std::vector<Equipment> equipment;   ///< Required equipment (e.g., "blender", "oven").
     
         // Nutritional info (per serving)
-        int kcal = 0;    ///< Per-serving calories.
-        int protein = 0; ///< Per-serving protein in grams.
-        int carbs = 0;   ///< Per-serving carbohydrates in grams.
-        int fat = 0;     ///< Per-serving fat in grams.
+        Calories kcal = Calories{0}; ///< Per-serving calories.
+        Grams protein = Grams{0};    ///< Per-serving protein in grams.
+        Grams carbs = Grams{0};      ///< Per-serving carbohydrates in grams.
+        Grams fat = Grams{0};        ///< Per-serving fat in grams.
     
         // Advanced filtering & info
         std::optional<Cuisine> cuisine;            ///< Cuisine origin (e.g., "Italian", "Japanese").
@@ -60,13 +61,10 @@ namespace mealplanner::model {
         std::optional<std::string> sourceUrl; ///< Original source (e.g., blog or cookbook URL).
         std::optional<std::string> author;    ///< Creator or source of the recipe.
     
-        Recipe(std::string id_, std::string name_, int servings_)
+        Recipe(std::string id_, std::string name_, Servings servings_)
             : id(std::move(id_)), name(std::move(name_)), servings(servings_) {
             if (id.empty() || name.empty()) {
                 throw std::invalid_argument("Recipe requires non-empty id & name");
-            }
-            if (servings <= 0) {
-                throw std::invalid_argument("servings must be > 0");
             }
         }
         Recipe() = default;
