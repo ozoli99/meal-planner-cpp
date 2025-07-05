@@ -75,6 +75,19 @@ std::optional<MealPlan> BalancedMealPlanner::generateMealPlan(const std::vector<
         }
     }
 
+    if (breakfastOptions.empty()) {
+        throw std::runtime_error("No breakfast recipes match your dietary restrictions and max prep time.");
+    }
+    if (lunchOptions.empty()) {
+        throw std::runtime_error("No lunch recipes match your dietary restrictions and max prep time.");
+    }
+    if (dinnerOptions.empty()) {
+        throw std::runtime_error("No dinner recipes match your dietary restrictions and max prep time.");
+    }
+    if (user.snackSlots > 0 && snackOptions.empty()) {
+        throw std::runtime_error(std::string("User requested ") + std::to_string(user.snackSlots) + " snacks, but no compliant snack recipes were found.");
+    }
+
     MealPlan bestPlan;
     double highestScore = -1e9;
     bool found = false;
@@ -84,7 +97,7 @@ std::optional<MealPlan> BalancedMealPlanner::generateMealPlan(const std::vector<
     for (const auto& breakfast : breakfastOptions) {
         for (const auto& lunch : lunchOptions) {
             for (const auto& dinner : dinnerOptions) {
-                std::vector<std::vector<Recipe>> snackCombinations = (user.snackSlots > 0 && !snackOptions.empty())
+                auto snackCombinations = (user.snackSlots > 0)
                     ? generateSnackCombinations(snackOptions, user.snackSlots)
                     : std::vector<std::vector<Recipe>>{{}};
 
@@ -106,9 +119,9 @@ std::optional<MealPlan> BalancedMealPlanner::generateMealPlan(const std::vector<
         }
     }
 
-    if (found) {
-        return bestPlan;
-    } else {
-        return std::nullopt;
+    if (!found) {
+        throw std::runtime_error("We tried every combination but couldn't hit your nutritional targets - try relaxing restrictions or adding more recipes.");
     }
+
+    return bestPlan;
 }

@@ -1,263 +1,851 @@
 [
     {
-        "name": "almond milk",
-        "quantity": 100,
-        "unit": "g",
-        "kcalPerUnit": 19,
-        "protein_per_100g": 0.7,
-        "carbs_per_100g": 0.7,
-        "fat_per_100g": 1.6
+        "id": "almond",
+        "name": "Almond, whole (raw)",
+        "parent": null,
+        "default_unit": "g",
+        "category_id": "cat_nut"
     },
     {
-        "name": "apples",
-        "kcal_per_100g": 65,
-        "protein_per_100g": 0.2,
-        "carbs_per_100g": 15.6,
-        "fat_per_100g": 0.2
+        "id": "almond_flour",
+        "name": "Almond flour",
+        "parent": "almond",
+        "default_unit": "g",
+        "category_id": "cat_nut"
     },
     {
-        "name": "apricot",
-        "kcal_per_100g": 48,
-        "protein_per_100g": 1,
-        "carbs_per_100g": 10.2,
-        "fat_per_100g": 0.4
+        "id": "almond_butter",
+        "name": "Almond butter (generic)",
+        "parent": "almond",
+        "default_unit": "g",
+        "category_id": "cat_nut"
     },
     {
-        "name": "asparagus",
-        "kcal_per_100g": 28,
-        "protein_per_100g": 1.4,
-        "carbs_per_100g": 5.1,
-        "fat_per_100g": 0.2
+        "id": "almond_butter_creamy",
+        "name": "Almond butter, creamy",
+        "parent": "almond_butter",
+        "default_unit": "g",
+        "category_id": "cat_nut"
     },
     {
-        "name": "avocado",
-        "kcal_per_100g": 223,
-        "protein_per_100g": 1.8,
-        "carbs_per_100g": 8.3,
-        "fat_per_100g": 20.3
+        "id": "almond_dry_roasted_salted",
+        "name": "Almonds, dry-roasted, salted",
+        "parent": "almond",
+        "default_unit": "g",
+        "category_id": "cat_nut"
     },
     {
-        "name": "bananas",
-        "kcal_per_100g": 98,
-        "protein_per_100g": 0.7,
-        "carbs_per_100g": 23,
-        "fat_per_100g": 0.3
+        "id": "almond_milk",
+        "name": "Almond milk (generic)",
+        "parent": null,
+        "default_unit": "ml",
+        "category_id": "cat_milk_alt"
     },
     {
-        "name": "beets",
-        "kcal_per_100g": 45,
-        "protein_per_100g": 1.7,
-        "carbs_per_100g": 8.8,
-        "fat_per_100g": 0.3
+        "id": "almond_milk_unsweetened_refrig",
+        "name": "Almond milk, unsweetened (refrigerated)",
+        "parent": "almond_milk",
+        "default_unit": "ml",
+        "category_id": "cat_milk_alt"
     },
     {
-        "name": "blueberries",
-        "kcal_per_100g": 57,
-        "protein_per_100g": 0.7,
-        "carbs_per_100g": 14.5,
-        "fat_per_100g": 0.3
+        "id": "almond_milk_unsweetened_shelf",
+        "name": "Almond milk, unsweetened (shelf-stable)",
+        "parent": "almond_milk",
+        "default_unit": "ml",
+        "category_id": "cat_milk_alt"
+    },
+
+    {
+        "id": "apple",
+        "name": "Apple",
+        "parent": null,
+        "default_unit": "g",
+        "category_id": "cat_fruit"
     },
     {
-        "name": "broccoli",
-        "kcal_per_100g": 39,
-        "protein_per_100g": 2.6,
-        "carbs_per_100g": 6.3,
-        "fat_per_100g": 0.3
+        "id": "apple_granny_smith",
+        "name": "Apple, Granny Smith",
+        "parent": "apple",
+        "default_unit": "g",
+        "category_id": "cat_fruit"
     },
     {
-        "name": "brussels sprouts",
-        "kcal_per_100g": 59,
-        "protein_per_100g": 4,
-        "carbs_per_100g": 9.6,
-        "fat_per_100g": 0.6
+        "id": "apple_gala",
+        "name": "Apple, Gala",
+        "parent": "apple",
+        "default_unit": "g",
+        "category_id": "cat_fruit"
+    },
+
+    {
+        "id": "apricot",
+        "name": "Apricot",
+        "parent": null,
+        "default_unit": "g",
+        "category_id": "cat_fruit"
     },
     {
-        "name": "buckwheat",
-        "kcal_per_100g": 356,
-        "protein_per_100g": 11.1,
-        "carbs_per_100g": 71.1,
-        "fat_per_100g": 3
+        "id": "asparagus",
+        "name": "Asparagus",
+        "parent": null,
+        "default_unit": "g",
+        "category_id": "cat_vegetable"
     },
     {
-        "name": "bulgur",
-        "kcal_per_100g": 372,
-        "protein_per_100g": 11.8,
-        "carbs_per_100g": 75.9,
-        "fat_per_100g": 2.4
+        "id": "avocado",
+        "name": "Avocado",
+        "parent": null,
+        "default_unit": "g",
+        "category_id": "cat_fruit"
     },
     {
-        "name": "cauliflower",
-        "kcal_per_100g": 28,
-        "protein_per_100g": 1.6,
-        "carbs_per_100g": 4.7,
-        "fat_per_100g": 0.2
+        "id": "baking_powder",
+        "name": "Baking powder",
+        "parent": null,
+        "default_unit": "g",
+        "category_id": "cat_baking_aid"
     },
     {
-        "name": "celery",
-        "kcal_per_100g": 17,
-        "protein_per_100g": 0.5,
-        "carbs_per_100g": 3.3,
-        "fat_per_100g": 0.2
+        "id": "baking_soda",
+        "name": "Baking soda",
+        "parent": null,
+        "default_unit": "g",
+        "category_id": "cat_baking_aid"
     },
     {
-        "name": "cheese, cottage",
-        "kcal_per_100g": 103,
-        "protein_per_100g": 11.6,
-        "carbs_per_100g": 4.6,
-        "fat_per_100g": 4.2
+        "id": "banana",
+        "name": "Banana",
+        "parent": null,
+        "default_unit": "g",
+        "category_id": "cat_fruit"
     },
     {
-        "name": "cheese, feta",
-        "kcal_per_100g": 273,
-        "protein_per_100g": 19.7,
-        "carbs_per_100g": 5.6,
-        "fat_per_100g": 19.1
+        "id": "basil",
+        "name": "Basil (generic)",
+        "parent": null,
+        "default_unit": "g",
+        "category_id": "cat_herb"
     },
     {
-        "name": "cheese, mozzarella",
-        "kcal_per_100g": 296,
-        "protein_per_100g": 23.7,
-        "carbs_per_100g": 4.4,
-        "fat_per_100g": 20.4
+        "id": "basil_fresh",
+        "name": "Basil, fresh",
+        "parent": "basil",
+        "default_unit": "g",
+        "category_id": "cat_herb"
     },
     {
-        "name": "cheese, ricotta",
-        "kcal_per_100g": 157,
-        "protein_per_100g": 7.8,
-        "carbs_per_100g": 6.9,
-        "fat_per_100g": 11
+        "id": "basil_dried",
+        "name": "Basil, dried",
+        "parent": "basil",
+        "default_unit": "g",
+        "category_id": "cat_spice"
     },
     {
-        "name": "chia seeds",
-        "kcal_per_100g": 517,
-        "protein_per_100g": 17,
-        "carbs_per_100g": 38.3,
-        "fat_per_100g": 32.9
+        "id": "beets",
+        "name": "Beets",
+        "parent": null,
+        "default_unit": "g",
+        "category_id": "cat_vegetable"
     },
     {
-        "name": "chicken, breast",
-        "kcal_per_100g": 106,
-        "protein_per_100g": 22.5,
-        "carbs_per_100g": 0,
-        "fat_per_100g": 1.9
+        "id": "blueberries",
+        "name": "Blueberries",
+        "parent": null,
+        "default_unit": "g",
+        "category_id": "cat_fruit"
     },
     {
-        "name": "chicken, drumstick",
-        "kcal_per_100g": 125,
-        "protein_per_100g": 18.4,
-        "carbs_per_100g": 0,
-        "fat_per_100g": 5.9
+        "id": "broccoli",
+        "name": "Broccoli",
+        "parent": null,
+        "default_unit": "g",
+        "category_id": "cat_vegetable"
     },
     {
-        "name": "chicken, thigh",
-        "kcal_per_100g": 144,
-        "protein_per_100g": 18.6,
-        "carbs_per_100g": 0,
-        "fat_per_100g": 7.9
+        "id": "brussels_sprouts",
+        "name": "Brussels sprouts",
+        "parent": null,
+        "default_unit": "g",
+        "category_id": "cat_vegetable"
+    },
+
+    {
+        "id": "buckwheat",
+        "name": "Buckwheat (dry)",
+        "parent": null,
+        "default_unit": "g",
+        "category_id": "cat_grain"
     },
     {
-        "name": "chicken, wing",
-        "kcal_per_100g": 168,
-        "protein_per_100g": 18.4,
-        "carbs_per_100g": 0,
-        "fat_per_100g": 10.6
+        "id": "bulgur",
+        "name": "Bulgur (dry)",
+        "parent": null,
+        "default_unit": "g",
+        "category_id": "cat_grain"
     },
     {
-        "name": "chickpeas",
-        "kcal_per_100g": 164,
-        "protein_per_100g": 8.9,
-        "carbs_per_100g": 27.4,
-        "fat_per_100g": 2.6
+        "id": "butter",
+        "name": "Butter (generic)",
+        "parent": null,
+        "default_unit": "g",
+        "category_id": "cat_dairy"
     },
     {
-        "name": "corn flour",
-        "kcal_per_100g": 376,
-        "protein_per_100g": 7.6,
-        "carbs_per_100g": 76.7,
-        "fat_per_100g": 4.3
+        "id": "butter_salted",
+        "name": "Butter, stick, salted",
+        "parent": "butter",
+        "default_unit": "g",
+        "category_id": "cat_dairy"
     },
     {
-        "name": "corn",
-        "kcal_per_100g": 85,
-        "protein_per_100g": 2.8,
-        "carbs_per_100g": 14.7,
-        "fat_per_100g": 1.6
+        "id": "butter_unsalted",
+        "name": "Butter, stick, unsalted",
+        "parent": "butter",
+        "default_unit": "g",
+        "category_id": "cat_dairy"
     },
     {
-        "name": "cucumber",
-        "kcal_per_100g": 16,
-        "protein_per_100g": 0.6,
-        "carbs_per_100g": 3,
-        "fat_per_100g": 0.2
+        "id": "corn_flour",
+        "name": "Corn flour (masa)",
+        "parent": null,
+        "default_unit": "g",
+        "category_id": "cat_grain"
     },
     {
-        "name": "egg white",
-        "kcal_per_100g": 52,
-        "protein_per_100g": 10.7,
-        "carbs_per_100g": 2.4,
-        "fat_per_100g": 0.1
+        "id": "capers",
+        "name": "Capers, brined",
+        "parent": null,
+        "default_unit": "g",
+        "category_id": "cat_condiment"
     },
     {
-        "name": "egg",
-        "kcal_per_100g": 143,
-        "protein_per_100g": 12.4,
-        "carbs_per_100g": 1,
-        "fat_per_100g": 10
+        "id": "cauliflower",
+        "name": "Cauliflower",
+        "parent": null,
+        "default_unit": "g",
+        "category_id": "cat_vegetable"
     },
     {
-        "name": "egg yolk",
-        "kcal_per_100g": 328,
-        "protein_per_100g": 16.2,
-        "carbs_per_100g": 1,
-        "fat_per_100g": 28.8
+        "id": "celery",
+        "name": "Celery",
+        "parent": null,
+        "default_unit": "g",
+        "category_id": "cat_vegetable"
     },
     {
-        "name": "fish, catfish",
-        "kcal_per_100g": 129,
-        "protein_per_100g": 16.5,
-        "carbs_per_100g": 0,
-        "fat_per_100g": 7.3
+        "id": "cinnamon",
+        "name": "Cinnamon, ground",
+        "parent": null,
+        "default_unit": "g",
+        "category_id": "cat_spice"
     },
     {
-        "name": "fish, cod",
-        "kcal_per_100g": 66,
-        "protein_per_100g": 16.1,
-        "carbs_per_100g": 0,
-        "fat_per_100g": 0.7
+        "id": "coconut",
+        "name": "Coconut (generic)",
+        "parent": null,
+        "default_unit": "g",
+        "category_id": "cat_nut"
     },
     {
-        "name": "fish, haddock",
-        "kcal_per_100g": 69,
-        "protein_per_100g": 16.3,
-        "carbs_per_100g": 0,
-        "fat_per_100g": 0.45
+        "id": "coconut_meat_raw",
+        "name": "Coconut meat, raw",
+        "parent": "coconut",
+        "default_unit": "g",
+        "category_id": "cat_nut"
     },
     {
-        "name": "fish, pollock",
-        "kcal_per_100g": 53,
-        "protein_per_100g": 12.3,
-        "carbs_per_100g": 0,
-        "fat_per_100g": 0.4
+        "id": "coconut_meat_dried_unsweet",
+        "name": "Coconut meat, dried, unsweetened (desiccated)",
+        "parent": "coconut",
+        "default_unit": "g",
+        "category_id": "cat_nut"
     },
     {
-        "name": "fish, salmon",
-        "kcal_per_100g": 197,
-        "protein_per_100g": 20.3,
-        "carbs_per_100g": 0,
-        "fat_per_100g": 13.1
+        "id": "coconut_meat_dried_toasted",
+        "name": "Coconut meat, dried, toasted",
+        "parent": "coconut",
+        "default_unit": "g",
+        "category_id": "cat_nut"
     },
     {
-        "name": "fish, tilapia",
-        "kcal_per_100g": 95,
-        "protein_per_100g": 19,
-        "carbs_per_100g": 0,
-        "fat_per_100g": 2.5
+        "id": "coconut_meat_dried_sweet_shredded",
+        "name": "Coconut meat, dried, sweetened, shredded",
+        "parent": "coconut",
+        "default_unit": "g",
+        "category_id": "cat_nut"
     },
     {
-        "name": "oats",
-        "kcal_per_100g": 382,
-        "protein_per_100g": 13.5,
-        "carbs_per_100g": 68.7,
-        "fat_per_100g": 5.9
+        "id": "coconut_meat_dried_sweet_flaked_canned",
+        "name": "Coconut meat, dried, sweetened, flaked, canned",
+        "parent": "coconut",
+        "default_unit": "g",
+        "category_id": "cat_nut"
+    },
+    {
+        "id": "coconut_meat_dried_sweet_flaked_pkg",
+        "name": "Coconut meat, dried, sweetened, flaked, packaged",
+        "parent": "coconut",
+        "default_unit": "g",
+        "category_id": "cat_nut"
+    },
+    {
+        "id": "coconut_flour",
+        "name": "Coconut flour",
+        "parent": "coconut",
+        "default_unit": "g",
+        "category_id": "cat_nut"
+    },
+    {
+        "id": "coconut_oil",
+        "name": "Coconut oil",
+        "parent": "coconut",
+        "default_unit": "g",
+        "category_id": "cat_oil"
+    },
+    {
+        "id": "coconut_water",
+        "name": "Coconut water",
+        "parent": "coconut",
+        "default_unit": "ml",
+        "category_id": "cat_milk_alt"
+    },
+    {
+        "id": "coconut_milk",
+        "name": "Coconut milk (generic, expressed)",
+        "parent": "coconut",
+        "default_unit": "ml",
+        "category_id": "cat_milk_alt"
+    },
+    {
+        "id": "coconut_milk_canned",
+        "name": "Coconut milk, canned",
+        "parent": "coconut_milk",
+        "default_unit": "ml",
+        "category_id": "cat_milk_alt"
+    },
+    {
+        "id": "coconut_milk_frozen",
+        "name": "Coconut milk, frozen",
+        "parent": "coconut_milk",
+        "default_unit": "ml",
+        "category_id": "cat_milk_alt"
+    },
+    {
+        "id": "coconut_milk_raw",
+        "name": "Coconut milk, raw (fresh pressed)",
+        "parent": "coconut_milk",
+        "default_unit": "ml",
+        "category_id": "cat_milk_alt"
+    },
+    {
+        "id": "coconut_milk_sweetened_fortified",
+        "name": "Coconut milk, sweetened & fortified (beverage)",
+        "parent": "coconut_milk",
+        "default_unit": "ml",
+        "category_id": "cat_milk_alt"
+    },
+    {
+        "id": "corn",
+        "name": "Corn",
+        "parent": null,
+        "default_unit": "g",
+        "category_id": "cat_vegetable"
+    },
+    {
+        "id": "cucumber",
+        "name": "Cucumber",
+        "parent": null,
+        "default_unit": "g",
+        "category_id": "cat_vegetable"
+    },
+
+    {
+        "id": "cottage_cheese",
+        "name": "Cottage cheese",
+        "parent": null,
+        "default_unit": "g",
+        "category_id": "cat_dairy"
+    },
+    {
+        "id": "cream_cheese",
+        "name": "Cream cheese (generic)",
+        "parent": null,
+        "default_unit": "g",
+        "category_id": "cat_dairy"
+    },
+    {
+        "id": "cream_cheese_full_fat",
+        "name": "Cream cheese (full-fat)",
+        "parent": "cream_cheese",
+        "default_unit": "g",
+        "category_id": "cat_dairy"
+    },
+    {
+        "id": "cream_cheese_low_fat",
+        "name": "Cream cheese (low-fat)",
+        "parent": "cream_cheese",
+        "default_unit": "g",
+        "category_id": "cat_dairy"
+    },
+    {
+        "id": "cream_cheese_fat_free",
+        "name": "Cream cheese (fat-free)",
+        "parent": "cream_cheese",
+        "default_unit": "g",
+        "category_id": "cat_dairy"
+    },
+    {
+        "id": "feta_cheese",
+        "name": "Feta cheese",
+        "parent": null,
+        "default_unit": "g",
+        "category_id": "cat_dairy"
+    },
+    {
+        "id": "mozzarella_cheese",
+        "name": "Mozzarella cheese",
+        "parent": null,
+        "default_unit": "g",
+        "category_id": "cat_dairy"
+    },
+    {
+        "id": "ricotta_cheese",
+        "name": "Ricotta cheese",
+        "parent": null,
+        "default_unit": "g",
+        "category_id": "cat_dairy"
+    },
+
+    {
+        "id": "chia_seeds",
+        "name": "Chia seeds",
+        "parent": null,
+        "default_unit": "g",
+        "category_id": "cat_seed"
+    },
+
+    {
+        "id": "chicken_breast",
+        "name": "Chicken, breast (raw)",
+        "parent": null,
+        "default_unit": "g",
+        "category_id": "cat_poultry"
+    },
+    {
+        "id": "chicken_drumstick",
+        "name": "Chicken, drumstick (raw)",
+        "parent": null,
+        "default_unit": "g",
+        "category_id": "cat_poultry"
+    },
+    {
+        "id": "chicken_thigh",
+        "name": "Chicken, thigh (raw)",
+        "parent": null,
+        "default_unit": "g",
+        "category_id": "cat_poultry"
+    },
+    {
+        "id": "chicken_wing",
+        "name": "Chicken, wing (raw)",
+        "parent": null,
+        "default_unit": "g",
+        "category_id": "cat_poultry"
+    },
+
+    {
+        "id": "chickpeas",
+        "name": "Chickpeas (cooked, canned)",
+        "parent": null,
+        "default_unit": "g",
+        "category_id": "cat_legume"
+    },
+
+    {
+        "id": "egg",
+        "name": "Whole egg",
+        "parent": null,
+        "default_unit": "g",
+        "category_id": "cat_egg"
+    },
+    {
+        "id": "egg_white",
+        "name": "Egg white",
+        "parent": "egg",
+        "default_unit": "g",
+        "category_id": "cat_egg"
+    },
+    {
+        "id": "egg_yolk",
+        "name": "Egg yolk",
+        "parent": "egg",
+        "default_unit": "g",
+        "category_id": "cat_egg"
+    },
+
+    {
+        "id": "fish_catfish",
+        "name": "Catfish (raw)",
+        "parent": null,
+        "default_unit": "g",
+        "category_id": "cat_fish"
+    },
+    {
+        "id": "fish_cod",
+        "name": "Cod (raw)",
+        "parent": null,
+        "default_unit": "g",
+        "category_id": "cat_fish"
+    },
+    {
+        "id": "fish_haddock",
+        "name": "Haddock (raw)",
+        "parent": null,
+        "default_unit": "g",
+        "category_id": "cat_fish"
+    },
+    {
+        "id": "fish_pollock",
+        "name": "Pollock (raw)",
+        "parent": null,
+        "default_unit": "g",
+        "category_id": "cat_fish"
+    },
+    {
+        "id": "fish_salmon",
+        "name": "Salmon (raw, Atlantic)",
+        "parent": null,
+        "default_unit": "g",
+        "category_id": "cat_fish"
+    },
+    {
+        "id": "fish_tilapia",
+        "name": "Tilapia (raw)",
+        "parent": null,
+        "default_unit": "g",
+        "category_id": "cat_fish"
+    },
+    {
+        "id": "gelatine_sheets",
+        "name": "Gelatine sheets",
+        "parent": null,
+        "default_unit": "g",
+        "category_id": "cat_baking_aid"
+    },
+    {
+        "id": "greek_yogurt",
+        "name": "Yogurt, Greek (generic)",
+        "parent": null,
+        "default_unit": "g",
+        "category_id": "cat_dairy"
+    },
+    {
+        "id": "greek_yogurt_plain_nonfat",
+        "name": "Yogurt, Greek, plain, non-fat",
+        "parent": "greek_yogurt",
+        "default_unit": "g",
+        "category_id": "cat_dairy"
+    },
+    {
+        "id": "greek_yogurt_plain_whole",
+        "name": "Yogurt, Greek, plain, whole-milk",
+        "parent": "greek_yogurt",
+        "default_unit": "g",
+        "category_id": "cat_dairy"
+    },
+    {
+        "id": "greek_yogurt_strawberry_nonfat",
+        "name": "Yogurt, Greek, strawberry, non-fat",
+        "parent": "greek_yogurt",
+        "default_unit": "g",
+        "category_id": "cat_dairy"
+    },
+    {
+        "id": "honey",
+        "name": "Honey",
+        "parent": null,
+        "default_unit": "g",
+        "category_id": "cat_sweetener"
+    },
+    {
+        "id": "lemon",
+        "name": "Lemon",
+        "parent": null,
+        "default_unit": "g",
+        "category_id": "cat_fruit"
+    },
+    {
+        "id": "lettuce",
+        "name": "Lettuce (generic)",
+        "parent": null,
+        "default_unit": "g",
+        "category_id": "cat_vegetable"
+    },
+    {
+        "id": "lettuce_iceberg",
+        "name": "Lettuce, iceberg, raw",
+        "parent": "lettuce",
+        "default_unit": "g",
+        "category_id": "cat_vegetable"
+    },
+    {
+        "id": "lettuce_romaine",
+        "name": "Lettuce, romaine/cos, raw",
+        "parent": "lettuce",
+        "default_unit": "g",
+        "category_id": "cat_vegetable"
+    },
+    {
+        "id": "lettuce_romaine_green",
+        "name": "Lettuce, romaine, green, raw",
+        "parent": "lettuce_romaine",
+        "default_unit": "g",
+        "category_id": "cat_vegetable"
+    },
+    {
+        "id": "lettuce_leaf_green",
+        "name": "Lettuce, leaf, green, raw",
+        "parent": "lettuce",
+        "default_unit": "g",
+        "category_id": "cat_vegetable"
+    },
+    {
+        "id": "lettuce_leaf_red",
+        "name": "Lettuce, leaf, red, raw",
+        "parent": "lettuce",
+        "default_unit": "g",
+        "category_id": "cat_vegetable"
+    },
+    {
+        "id": "oats",
+        "name": "Oats (dry)",
+        "parent": null,
+        "default_unit": "g",
+        "category_id": "cat_grain"
+    },
+    {
+        "id": "peanut",
+        "name": "Peanut, whole (raw)",
+        "parent": null,
+        "default_unit": "g",
+        "category_id": "cat_legume"
+    },
+    {
+        "id": "peanut_butter",
+        "name": "Peanut butter (generic)",
+        "parent": "peanut",
+        "default_unit": "g",
+        "category_id": "cat_legume"
+    },
+    {
+        "id": "peanut_butter_creamy",
+        "name": "Peanut butter, creamy",
+        "parent": "peanut_butter",
+        "default_unit": "g",
+        "category_id": "cat_legume"
+    },
+    {
+        "id": "pepper",
+        "name": "Black pepper, ground",
+        "parent": null,
+        "default_unit": "g",
+        "category_id": "cat_spice"
+    },
+    {
+        "id": "salt",
+        "name": "Salt (table)",
+        "parent": null,
+        "default_unit": "g",
+        "category_id": "cat_seasoning"
+    },
+    {
+        "id": "sesame_seed",
+        "name": "Sesame seed (whole, raw)",
+        "parent": null,
+        "default_unit": "g",
+        "category_id": "cat_seed"
+    },
+    {
+        "id": "sesame_butter",
+        "name": "Sesame butter / tahini (generic)",
+        "parent": "sesame_seed",
+        "default_unit": "g",
+        "category_id": "cat_seed"
+    },
+    {
+        "id": "sesame_butter_creamy",
+        "name": "Sesame butter, creamy",
+        "parent": "sesame_butter",
+        "default_unit": "g",
+        "category_id": "cat_seed"
+    },
+    {
+        "id": "sweetener",
+        "name": "Sweetener (generic)",
+        "parent": null,
+        "default_unit": "g",
+        "category_id": "cat_sweetener"
+    },
+    {
+        "id": "agave_syrup",
+        "name": "Agave syrup / nectar",
+        "parent": "sweetener",
+        "default_unit": "ml",
+        "category_id": "cat_sweetener"
+    },
+    {
+        "id": "fructose_liquid",
+        "name": "Fructose, liquid",
+        "parent": "sweetener",
+        "default_unit": "ml",
+        "category_id": "cat_sweetener"
+    },
+    {
+        "id": "fructose_powder",
+        "name": "Fructose, powder",
+        "parent": "sweetener",
+        "default_unit": "g",
+        "category_id": "cat_sweetener"
+    },
+    {
+        "id": "erythritol",
+        "name": "Erythritol (crystalline)",
+        "parent": "sweetener",
+        "default_unit": "g",
+        "category_id": "cat_sweetener"
+    },
+    {
+        "id": "stevia_powder",
+        "name": "Stevia leaf extract, powder",
+        "parent": "sweetener",
+        "default_unit": "g",
+        "category_id": "cat_sweetener"
+    },
+    {
+        "id": "sucralose_packets",
+        "name": "Sucralose tabletop packets (e.g. Splenda)",
+        "parent": "sweetener",
+        "default_unit": "g",
+        "category_id": "cat_sweetener"
+    },
+    {
+        "id": "aspartame_packets",
+        "name": "Aspartame tabletop packets (e.g. Equal)",
+        "parent": "sweetener",
+        "default_unit": "g",
+        "category_id": "cat_sweetener"
+    },
+    {
+        "id": "saccharin_packets",
+        "name": "Saccharin tabletop packets",
+        "parent": "sweetener",
+        "default_unit": "g",
+        "category_id": "cat_sweetener"
+    },
+    {
+        "id": "sucralose_blend_white",
+        "name": "Sugar + sucralose baking blend (white)",
+        "parent": "sweetener",
+        "default_unit": "g",
+        "category_id": "cat_sweetener"
+    },
+    {
+        "id": "sucralose_blend_brown",
+        "name": "Sugar + sucralose baking blend (brown)",
+        "parent": "sweetener",
+        "default_unit": "g",
+        "category_id": "cat_sweetener"
+    },
+    {
+        "id": "tomatoes",
+        "name": "Tomatoes (genreic, raw)",
+        "parent": null,
+        "default_unit": "g",
+        "category_id": "cat_vegetable"
+    },
+    {
+        "id": "tomatoes_roma_raw",
+        "name": "Tomatoes, roma, raw",
+        "parent": "tomatoes",
+        "default_unit": "g",
+        "category_id": "cat_vegetable"
+    },
+    {
+        "id": "tomatoes_grape_raw",
+        "name": "Tomatoes, grape, raw",
+        "parent": "tomatoes",
+        "default_unit": "g",
+        "category_id": "cat_vegetable"
+    },
+    {
+        "id": "tomatoes_canned_whole",
+        "name": "Tomatoes, whole, canned (with juice, salted)",
+        "parent": "tomatoes",
+        "default_unit": "g",
+        "category_id": "cat_vegetable_canned"
+    },
+    {
+        "id": "tomatoes_canned_diced",
+        "name": "Tomatoes, diced, canned (salted)",
+        "parent": "tomatoes",
+        "default_unit": "g",
+        "category_id": "cat_vegetable_canned"
+    },
+    {
+        "id": "tomatoes_canned_crushed",
+        "name": "Tomatoes, crushed, canned",
+        "parent": "tomatoes",
+        "default_unit": "g",
+        "category_id": "cat_vegetable_canned"
+    },
+    {
+        "id": "tomato_puree_canned",
+        "name": "Tomato puree, canned",
+        "parent": "tomatoes",
+        "default_unit": "g",
+        "category_id": "cat_vegetable_canned"
+    },
+    {
+        "id": "tomato_sauce_canned",
+        "name": "Tomato sauce, canned (salted)",
+        "parent": "tomatoes",
+        "default_unit": "g",
+        "category_id": "cat_vegetable_canned"
+    },
+    {
+        "id": "tomato_paste_unsalted",
+        "name": "Tomato paste, canned, unsalted",
+        "parent": "tomatoes",
+        "default_unit": "g",
+        "category_id": "cat_vegetable_canned"
+    },
+    {
+        "id": "tomato_juice_concentrate",
+        "name": "Tomato juice (from concentrate, shelf-stable)",
+        "parent": "tomatoes",
+        "default_unit": "ml",
+        "category_id": "cat_vegetable_canned"
+    },
+    {
+        "id": "water",
+        "name": "Water",
+        "parent": null,
+        "default_unit": "ml",
+        "category_id": "cat_other"
+    },
+    {
+        "id": "whipping_cream",
+        "name": "Cream, heavy/whipping",
+        "parent": null,
+        "default_unit": "g",
+        "category_id": "cat_dairy"
+    },
+    {
+        "id": "whole_wheat_bread",
+        "name": "Bread, whole-wheat",
+        "parent": null,
+        "default_unit": "g",
+        "category_id": "cat_bakery"
     }
 ]

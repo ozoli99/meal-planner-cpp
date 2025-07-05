@@ -1,0 +1,32 @@
+[
+    {
+        "feedback_id": "fb_8421c5",
+        "user_id": 42,
+        "recipe_id": "r3",
+        "date": "2025-07-09T20:30:00+02:00",
+
+        "rating": 4,
+        "difficulty": 2,
+        "time_deviation_minutes": 5,
+        "success": true,
+
+        "comment": "Texture perfect but crust softened next day. Will bake 2 min longer next time.",
+        "liked": ["flavour", "presentation"],
+        "disliked": ["soggy_crust"],
+
+        "serving_scale": 1.5,
+        "substitutions": [
+            {
+                "ingredient_id": "whipping_cream",
+                "replaced_with": "greek_yogurt"
+            }
+        ],
+        "equipment_variations": [
+            { "original": "hand_mixer", "used": "whisk", "effort_factor": 3 }
+        ],
+
+        "is_public": true,
+        "flagged": false,
+        "app_version": "1.3.2"
+    }
+]

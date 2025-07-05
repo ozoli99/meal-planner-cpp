@@ -65,16 +65,15 @@ void MealPlannerCLI::run(const std::string& userFile, const std::string& recipeF
             std::cout << "👤 User: " << user.name << " (" << user.calorieTarget << " kcal target)\n";
         }
 
-        auto planOpt = m_planner.generateMealPlan(recipes, user);
-        if (planOpt) {
-            const MealPlan& plan = *planOpt;
+        try {
+            auto plan = m_planner.generateMealPlan(recipes, user).value();
             MealPlanPresenter::PrintToConsole(plan, format, verbose);
             if (!outputPath.empty()) {
                 MealPlanPresenter::ExportToFile(plan, outputPath, format, verbose);
                 std::cout << "📄 Meal plan exported to " << outputPath << "\n";
             }
-        } else {
-            std::cerr << "❌ Could not generate a valid meal plan for the given user and recipes.\n";
+        } catch (const std::exception& e) {
+            std::cerr << "❌ Meal planning failed: " << e.what() << "\n";
         }
     } catch (const std::exception& e) {
         std::cerr << "Error: " << e.what() << "\n";

@@ -1,0 +1,194 @@
+{
+    "items": {
+        "oven": {
+            "name": "Oven",
+            "category_id": "eq_heat_source",
+            "tags": ["electric", "bake", "heat"],
+            "default_temp_c": 180,
+            "aliases": ["conventional oven", "range oven"]
+        },
+
+        "hand_mixer": {
+            "name": "Hand mixer",
+            "category_id": "eq_small_electric",
+            "tags": ["electric", "mix", "whip"],
+            "power_w": 300,
+            "substitutes": ["whisk"]
+        },
+
+        "whisk": {
+            "name": "Whisk (balloon)",
+            "category_id": "eq_utensil",
+            "tags": ["manual", "mix", "whip"],
+            "effort_factor": 3
+        },
+
+        "mixing_bowl": {
+            "name": "Mixing bowl",
+            "category_id": "eq_container",
+            "tags": ["bowl", "prep"],
+            "capacity_ml": 2500,
+            "dishwasher_safe": true
+        },
+
+        "muffin_tin": {
+            "name": "Muffin tin (12-cup)",
+            "category_id": "eq_bakeware",
+            "tags": ["bakeware", "tray"],
+            "cup_count": 12,
+            "cup_volume_ml": 75
+        },
+
+        "tart_molds": {
+            "name": "Mini tart molds",
+            "category_id": "eq_bakeware",
+            "aliases": ["tartlet pans"],
+            "tags": ["bakeware", "individual"],
+            "count_default": 6,
+            "diameter_cm": 8
+        },
+
+        "saucepan": {
+            "name": "Saucepan",
+            "category_id": "eq_cookware",
+            "tags": ["stovetop", "heat"],
+            "capacity_ml": 1500
+        },
+
+        "heat_proof_bowl": {
+            "name": "Heat-proof bowl",
+            "category_id": "eq_container",
+            "aliases": ["glass bowl", "pyrex bowl"],
+            "tags": ["microwave_safe", "double_boiler_top"],
+            "capacity_ml": 1000
+        },
+
+        "refrigerator": {
+            "name": "Refrigerator",
+            "category_id": "eq_large_appliance",
+            "tags": ["cold", "storage"],
+            "min_temp_c": 2,
+            "max_temp_c": 8
+        },
+
+        "food_processor": {
+            "name": "Food processor",
+            "category_id": "eq_small_electric",
+            "tags": ["electric", "chop", "blend", "pulse"],
+            "power_w": 600
+        },
+
+        "toaster": {
+            "name": "Toaster",
+            "category_id": "eq_small_electric",
+            "tags": ["electric", "heat", "bread"],
+            "slot_count": 2
+        },
+
+        "pot": {
+            "name": "Cooking pot",
+            "category_id": "eq_cookware",
+            "aliases": ["stockpot", "soup pot"],
+            "tags": ["stovetop", "boil", "simmer"],
+            "capacity_ml": 3000
+        },
+
+        "baking_dish": {
+            "name": "Rectangular baking dish",
+            "category_id": "eq_bakeware",
+            "tags": ["bakeware", "tray"],
+            "size_cm": [20, 30]
+        },
+
+        "knife": {
+            "name": "Chef’s knife",
+            "category_id": "eq_utensil",
+            "tags": ["cut", "chop", "slice"],
+            "blade_cm": 20
+        },
+
+        "cutting_board": {
+            "name": "Cutting board",
+            "category_id": "eq_utensil",
+            "tags": ["prep", "surface"],
+            "material": "wood"
+        },
+
+        "spoon": {
+            "name": "Table/serving spoon",
+            "category_id": "eq_utensil",
+            "tags": ["mix", "serve"]
+        },
+
+        "fork": {
+            "name": "Standard fork",
+            "category_id": "eq_utensil",
+            "tags": ["mix", "serve"]
+        },
+
+        "spatula": {
+            "name": "Rubber spatula",
+            "category_id": "eq_utensil",
+            "tags": ["mix", "fold", "scrape"],
+            "heat_resistant_c": 230
+        },
+
+        "measuring_cup": {
+            "name": "Measuring cup (250 ml)",
+            "category_id": "eq_measuring",
+            "aliases": ["cup measure"],
+            "tags": ["measure", "volume"],
+            "capacity_ml": 250
+        },
+
+        "grater": {
+            "name": "Box grater",
+            "category_id": "eq_utensil",
+            "tags": ["grate", "zest"]
+        },
+
+        "cooling_rack": {
+            "name": "Cooling rack",
+            "category_id": "eq_bakeware",
+            "tags": ["cool", "airflow"],
+            "size_cm": [30, 40]
+        },
+
+        "muffin_liners": {
+            "name": "Paper muffin liners",
+            "category_id": "eq_consumable",
+            "tags": ["disposable", "bakeware"],
+            "aliases": ["cupcake liners"],
+            "count_default": 12
+        }
+    },
+
+    "categories": {
+        "eq_large_appliance": { "name": "Large appliance", "parent": null },
+        "eq_heat_source": {
+            "name": "Heat source",
+            "parent": "eq_large_appliance"
+        },
+
+        "eq_small_electric": { "name": "Small electric", "parent": null },
+        "eq_utensil": { "name": "Hand utensil", "parent": null },
+
+        "eq_container": { "name": "Prep/serve vessel", "parent": null },
+        "eq_bakeware": { "name": "Bakeware", "parent": "eq_container" },
+        "eq_cookware": { "name": "Cookware", "parent": "eq_container" },
+
+        "eq_measuring": { "name": "Measuring tool", "parent": null },
+        "eq_consumable": { "name": "Disposable item", "parent": null }
+    },
+
+    "substitution_rules": [
+        { "needs": "hand_mixer", "use": "whisk", "effort_factor": 3 },
+        {
+            "needs": "muffin_tin",
+            "use": "baking_dish",
+            "note": "cut into squares"
+        }
+    ],
+
+    "last_updated": "2025-07-05"
+}

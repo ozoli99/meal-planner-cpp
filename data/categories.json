@@ -1,0 +1,54 @@
+[
+    { "id": "cat_plant_food", "name": "Plant food", "parent": null },
+
+    { "id": "cat_fruit", "name": "Fruit", "parent": "cat_plant_food" },
+    { "id": "cat_vegetable", "name": "Vegetable", "parent": "cat_plant_food" },
+    {
+        "id": "cat_vegetable_canned",
+        "name": "Vegetable - canned / processed",
+        "parent": "cat_vegetable"
+    },
+    {
+        "id": "cat_oil",
+        "name": "Plant oils & fats",
+        "parent": "cat_plant_food"
+    },
+    { "id": "cat_grain", "name": "Grain & cereal", "parent": "cat_plant_food" },
+    { "id": "cat_legume", "name": "Legume", "parent": "cat_plant_food" },
+    { "id": "cat_seed", "name": "Seed", "parent": "cat_plant_food" },
+    { "id": "cat_nut", "name": "Nut", "parent": "cat_plant_food" },
+    {
+        "id": "cat_milk_alt",
+        "name": "Plant-based milk",
+        "parent": "cat_plant_food"
+    },
+    {
+        "id": "cat_sweetener",
+        "name": "Sweetener / Sugar substitute",
+        "parent": "cat_plant_food"
+    },
+    { "id": "cat_herb", "name": "Herb (fresh)", "parent": "cat_plant_food" },
+    {
+        "id": "cat_spice",
+        "name": "Herb / spice (dried)",
+        "parent": "cat_plant_food"
+    },
+
+    { "id": "cat_pantry", "name": "Pantry staple", "parent": null },
+
+    { "id": "cat_baking_aid", "name": "Baking aid", "parent": "cat_pantry" },
+    { "id": "cat_confection", "name": "Confection", "parent": "cat_pantry" },
+
+    { "id": "cat_animal_products", "name": "Animal products", "parent": null },
+
+    { "id": "cat_dairy", "name": "Dairy", "parent": "cat_animal_products" },
+    { "id": "cat_egg", "name": "Eggs", "parent": "cat_animal_products" },
+
+    {
+        "id": "cat_animal_protein",
+        "name": "Animal protein",
+        "parent": "cat_animal_products"
+    },
+    { "id": "cat_poultry", "name": "Poultry", "parent": "cat_animal_protein" },
+    { "id": "cat_fish", "name": "Fish", "parent": "cat_animal_protein" }
+]

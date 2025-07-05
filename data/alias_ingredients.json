@@ -1,0 +1,188 @@
+{
+    "apple, raw": "apple",
+    "raw apple": "apple",
+    "manzana": "apple",
+    "granny smith apple": "apple_granny_smith",
+    "gs apple": "apple_granny_smith",
+    "gala apple": "apple_gala",
+
+    "blueberry": "blueberries",
+    "blueberries, frozen": "blueberries",
+
+    "almond flour": "almond_flour",
+    "almond meal": "almond_flour",
+
+    "almond butter": "almond_butter",
+    "almond butter creamy": "almond_butter_creamy",
+    "creamy almond butter": "almond_butter_creamy",
+
+    "almonds dry roasted": "almond_dry_roasted_salted",
+    "dry-roasted almonds": "almond_dry_roasted_salted",
+
+    "almondmilk": "almond_milk",
+    "almond milk": "almond_milk",
+    "almond milk unsweetened": "almond_milk_unsweetened_refrig",
+    "almond milk unsweetened refrigerated": "almond_milk_unsweetened_refrig",
+    "almond milk unsweetened shelf stable": "almond_milk_unsweetened_shelf",
+    "almond milk (shelf-stable)": "almond_milk_unsweetened_shelf",
+
+    "ricotta cheese": "ricotta_cheese",
+    "ricotta (full fat)": "ricotta_cheese",
+    "ricotta light": "ricotta_cheese",
+
+    "cottage cheese": "cottage_cheese",
+    "cottage cheese lowfat": "cottage_cheese",
+    "fat-free cottage cheese": "cottage_cheese",
+    "cottage cheese fullfat": "cottage_cheese",
+
+    "greek yogurt": "greek_yogurt",
+    "greek yoghurt": "greek_yogurt",
+    "plain greek yogurt": "greek_yogurt_plain_nonfat",
+    "nonfat greek yogurt": "greek_yogurt_plain_nonfat",
+    "fat-free greek yogurt": "greek_yogurt_plain_nonfat",
+    "whole greek yogurt": "greek_yogurt_plain_whole",
+    "full-fat greek yogurt": "greek_yogurt_plain_whole",
+    "2% greek yogurt": "greek_yogurt_plain_whole",
+    "strawberry greek yogurt": "greek_yogurt_strawberry_nonfat",
+    "greek yogurt strawberry": "greek_yogurt_strawberry_nonfat",
+
+    "whipping cream": "whipping_cream",
+    "heavy cream": "whipping_cream",
+
+    "cream cheese full fat": "cream_cheese_full_fat",
+    "cream cheese, full fat": "cream_cheese_full_fat",
+
+    "whole wheat bread": "whole_wheat_bread",
+    "wholemeal bread": "whole_wheat_bread",
+
+    "baking powder": "baking_powder",
+    "baking soda": "baking_soda",
+
+    "gelatine sheets": "gelatine_sheets",
+    "gelatin sheets": "gelatine_sheets",
+
+    "shredded coconut unsweetened": "shredded_coconut_unsweetened",
+    "shredded coconut, unsweetened": "shredded_coconut_unsweetened",
+
+    "chicken breast": "chicken_breast",
+    "boneless skinless breast": "chicken_breast",
+    "chicken drums": "chicken_drumstick",
+
+    "atlantic salmon": "fish_salmon",
+    "salmon fillet": "fish_salmon",
+    "pollack": "fish_pollock",
+    "alaska pollock": "fish_pollock",
+
+    "tomato": "tomatoes",
+    "tomatoes": "tomatoes",
+    "fresh tomato": "tomatoes",
+    "raw tomato": "tomatoes",
+
+    "roma tomato": "tomato_roma_raw",
+    "roma tomatoes": "tomato_roma_raw",
+
+    "grape tomato": "tomato_grape_raw",
+    "grape tomatoes": "tomato_grape_raw",
+
+    "canned whole tomatoes": "tomato_canned_whole",
+    "whole canned tomatoes": "tomato_canned_whole",
+    "canned diced tomatoes": "tomato_canned_diced",
+    "diced canned tomatoes": "tomato_canned_diced",
+    "canned crushed tomatoes": "tomato_canned_crushed",
+    "crushed canned tomatoes": "tomato_canned_crushed",
+
+    "tomato puree": "tomato_puree_canned",
+    "canned tomato puree": "tomato_puree_canned",
+    "tomato sauce": "tomato_sauce_canned",
+    "canned tomato sauce": "tomato_sauce_canned",
+    "tomato paste": "tomato_paste_unsalted",
+    "unsalted tomato paste": "tomato_paste_unsalted",
+
+    "tomato juice": "tomato_juice_concentrate",
+    "canned tomato juice": "tomato_juice_concentrate",
+    "tomato juice concentrate": "tomato_juice_concentrate",
+
+    "lettuce": "lettuce",
+    "iceberg lettuce": "lettuce_iceberg",
+    "iceberg": "lettuce_iceberg",
+
+    "romaine lettuce": "lettuce_romaine",
+    "cos lettuce": "lettuce_romaine",
+    "romaine (green)": "lettuce_romaine_green",
+
+    "green leaf lettuce": "lettuce_leaf_green",
+    "leaf lettuce green": "lettuce_leaf_green",
+    "red leaf lettuce": "lettuce_leaf_red",
+    "leaf lettuce red": "lettuce_leaf_red",
+
+    "basil": "basil",
+    "fresh basil": "basil_fresh",
+    "basil leaves": "basil_fresh",
+    "genovese basil": "basil_fresh",
+
+    "dried basil": "basil_dried",
+    "basil (dried)": "basil_dried",
+    "basil spice": "basil_dried",
+
+    "butter": "butter",
+    "unsalted butter": "butter_unsalted",
+    "sweet cream butter": "butter_unsalted",
+    "salted butter": "butter_salted",
+    "stick butter": "butter_salted",
+
+    "pb": "peanut_butter",
+    "peanutbutter": "peanut_butter",
+    "creamy peanut butter": "peanut_butter_creamy",
+
+    "tahini": "sesame_butter",
+    "tahini paste": "sesame_butter",
+    "creamy tahini": "sesame_butter_creamy",
+
+    "agave nectar": "agave_syrup",
+    "agave syrup": "agave_syrup",
+
+    "fructose syrup": "fructose_liquid",
+    "liquid fructose": "fructose_liquid",
+    "fructose powder": "fructose_powder",
+
+    "erythrit": "erythritol",
+    "erythritol sweetener": "erythritol",
+
+    "stevia": "stevia_powder",
+    "stevia extract": "stevia_powder",
+
+    "splenda": "sucralose_packets",
+    "sucralose": "sucralose_packets",
+
+    "equal": "aspartame_packets",
+    "aspartame": "aspartame_packets",
+
+    "sweet n low": "saccharin_packets",
+    "saccharin": "saccharin_packets",
+
+    "splenda blend": "sucralose_blend_white",
+    "brown splenda blend": "sucralose_blend_brown",
+
+    "coconut": "coconut",
+    "coconut meat": "coconut_meat_raw",
+    "fresh coconut": "coconut_meat_raw",
+
+    "desiccated coconut": "coconut_meat_dried_unsweet",
+    "unsweetened shredded coconut": "coconut_meat_dried_unsweet",
+    "toasted coconut flakes": "coconut_meat_dried_toasted",
+
+    "sweetened shredded coconut": "coconut_meat_dried_sweet_shredded",
+    "coconut flakes sweetened": "coconut_meat_dried_sweet_flaked_pkg",
+
+    "coconut flour": "coconut_flour",
+    "coconut oil": "coconut_oil",
+
+    "coconut water": "coconut_water",
+
+    "coconut milk": "coconut_milk",
+    "canned coconut milk": "coconut_milk_canned",
+    "full-fat coconut milk": "coconut_milk_canned",
+    "raw coconut milk": "coconut_milk_raw",
+    "frozen coconut milk": "coconut_milk_frozen",
+    "sweetened coconut milk beverage": "coconut_milk_sweetened_fortified"
+}

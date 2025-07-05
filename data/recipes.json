@@ -1,6 +1,8 @@
 [
     {
         "id": "r1",
+        "rev": "2025-07-05.a",
+
         "name": "Banana Oat Breakfast Muffins",
         "description": "Overripe bananas may be too brown to eat, but they're perfect for our sweet breakfast muffins. With their sticky consistency and sweetness, you can turn boring muffins into delicious power snacks! If you're looking for a fruity kick, try mixing in some blueberries too.",
 
@@ -12,97 +14,104 @@
         "ingredients": [
             {
                 "name": "oats",
-                "quantity": 105,
-                "unit": "g",
+                "quantity": { "quantity": 105, "unit": "g" },
                 "optional": false
             },
             {
-                "name": "bananas",
-                "quantity": 225,
-                "unit": "g",
-                "optional": false,
-                "note": "mashed"
+                "name": "banana",
+                "quantity": { "quantity": 225, "unit": "g", "note": "mashed" },
+                "optional": false
             },
             {
-                "name": "eggs",
-                "quantity": 2,
-                "unit": "piece",
+                "name": "egg",
+                "quantity": { "quantity": 2, "unit": "piece" },
                 "optional": false
             },
             {
                 "name": "honey",
-                "quantity": 50,
-                "unit": "g",
+                "quantity": { "quantity": 50, "unit": "g" },
                 "optional": false
             },
             {
-                "name": "baking powder",
-                "quantity": 4,
-                "unit": "g",
+                "name": "baking_powder",
+                "quantity": { "quantity": 4, "unit": "g" },
                 "optional": false
             },
             {
-                "name": "baking soda",
-                "quantity": 3,
-                "unit": "g",
+                "name": "baking_soda",
+                "quantity": { "quantity": 3, "unit": "g" },
                 "optional": false
             },
             {
                 "name": "salt",
-                "optional": true,
-                "note": "to taste"
+                "quantity": { "quantity": 0, "unit": "", "note": "to taste" },
+                "optional": true
             },
             {
                 "name": "cinnamon",
-                "optional": true,
-                "note": "to taste"
+                "quantity": { "quantity": 0, "unit": "", "note": "to taste" },
+                "optional": true
             },
             {
-                "name": "almond milk",
-                "quantity": 50,
-                "unit": "ml",
+                "name": "almond_milk",
+                "quantity": { "quantity": 50, "unit": "ml" },
                 "optional": false
             }
         ],
 
         "instructions": [
-            "Fill a half a cup with the oats and set to the side. Pour the remaining oats into a food processor and finely chop until they have the texture of flour.",
-            "Mash the bananas with a fork or use the food processor to do so.",
-            "Mix the chopped oats, mashed bananas, eggs, honey, almond milk, baking powder and baking soda together. Then, lightly season with salt and cinnamon.",
-            "Add the oat flakes that were previously set aside (except for a small amount). Divide the batter evenly among the cups of a muffin tin and sprinkle the remaining oats on top of each.",
-            "Place the muffins in the oven at 175°C / 350°F for approx. 20 minutes.",
-            "Enjoy!"
+            "Fill half a cup with the oats and set aside. Pulverise the remaining oats in a food processor until they resemble flour.",
+            "Mash the bananas with a fork (or food processor).",
+            "Combine oat flour, mashed bananas, eggs, honey, almond milk, baking powder and baking soda. Season with salt and cinnamon.",
+            "Fold in the reserved oat flakes (minus a pinch). Divide batter into a lined 12-cup muffin tin and sprinkle remaining oats on top.",
+            "Bake at 175°C / 350°F for approx. 20 minutes.",
+            "Cool and Enjoy!"
         ],
 
         "tags": [
             "breakfast",
+            "snack",
+            "on_the_go",
             "dessert",
-            "fruits",
+            "sweet",
             "lactose_free",
             "low_fat",
-            "on_the_go",
-            "pescetarian",
-            "snack",
-            "sweet",
-            "vegetarian"
+            "vegetarian",
+            "fruits",
+            "refined_sugar_free",
+            "high_fiber",
+            "make_ahead"
         ],
-        "allergens": ["eggs", "tree_nuts"],
+
+        "allergens": ["egg", "tree_nuts"],
+
         "equipment": [
-            { "name": "bowl", "optional": false },
-            { "name": "fork", "optional": false },
-            { "name": "muffin tin", "optional": false },
             { "name": "oven", "optional": false },
-            { "name": "food processor", "optional": true }
+            { "name": "muffin_tin", "optional": false },
+            { "name": "muffin_liners", "optional": true },
+            { "name": "mixing_bowl", "optional": false },
+            { "name": "food_processor", "optional": true },
+            { "name": "fork", "optional": false },
+            { "name": "measuring_cup", "optional": true },
+            { "name": "spatula", "optional": true },
+            { "name": "cooling_rack", "optional": true }
         ],
 
         "cuisine": "American",
         "difficulty": "easy",
-        "cost": { "value": 2.5, "currency": "EUR" },
+        "cost": { "value": 2.0, "currency": "EUR" },
         "batch-friendly": true,
         "prep_ahead_possible": true,
         "expiration_day": 3,
-        "suitable_for_goals": ["maintenance", "weight_loss"],
-        "required_skills": ["baking", "mixing"],
+
+        "suitable_for_goals": ["maintenance", "weight_loss", "muscle_gain"],
+        "required_skills": [
+            "baking",
+            "mixing",
+            "mashing",
+            "blending",
+            "portioning"
+        ],
 
         "image_url": "",
         "source_url": "",
@@ -110,6 +119,8 @@
     },
     {
         "id": "r2",
+        "rev": "2025-07-05.a",
+
         "name": "Tomato Sandwich with Egg Salad",
         "description": "Our crispy tomato sandwich with homemade egg salad is the perfect takeaway breakfast. Thickly prepared, it will keep you feeling full while keeping the calorie count within the limits.",
 
@@ -121,62 +132,58 @@
         "ingredients": [
             {
                 "name": "capers",
-                "quantity": 1,
-                "unit": "tbsp",
+                "quantity": { "quantity": 1, "unit": "tbsp" },
                 "optional": false
             },
             {
                 "name": "tomatoes",
-                "quantity": 2,
-                "unit": "piece",
-                "optional": false,
-                "note": ""
-            },
-            {
-                "name": "eggs",
-                "quantity": 1,
-                "unit": "piece",
+                "quantity": { "quantity": 2, "unit": "piece" },
                 "optional": false
             },
             {
-                "name": "greek yogurt",
-                "quantity": 100,
-                "unit": "g",
+                "name": "egg",
+                "quantity": { "quantity": 1, "unit": "piece" },
+                "optional": false
+            },
+            {
+                "name": "greek_yogurt",
+                "quantity": { "quantity": 100, "unit": "g" },
                 "optional": false
             },
             {
                 "name": "lettuce",
-                "quantity": 25,
-                "unit": "g",
+                "quantity": { "quantity": 25, "unit": "g" },
                 "optional": false
             },
             {
-                "name": "whole wheat bread",
-                "quantity": 4,
-                "unit": "slice",
-                "optional": false,
-                "note": "sliced"
+                "name": "whole_wheat_bread",
+                "quantity": {
+                    "quantity": 4,
+                    "unit": "slice",
+                    "note": "sliced"
+                },
+                "optional": false
             },
             {
                 "name": "salt",
-                "optional": true,
-                "note": "to taste"
+                "quantity": { "quantity": 0, "unit": "", "note": "to taste" },
+                "optional": true
             },
             {
                 "name": "pepper",
-                "optional": true,
-                "note": "to taste"
+                "quantity": { "quantity": 0, "unit": "", "note": "to taste" },
+                "optional": true
             },
             {
                 "name": "basil",
-                "optional": true,
-                "note": "to taste"
+                "quantity": { "quantity": 0, "unit": "", "note": "to taste" },
+                "optional": true
             }
         ],
 
         "instructions": [
-            "For the egg salad, boil the egg in a pot for 8 minutes.",
-            "In the meantime, finely chop the capers and cut the tomatoes into slices.",
+            "Boil the egg for 8 minutes; cool, peel and dice.",
+            "Finely chop capers and slice tomatoes.",
             "Remove the egg from the pot, hold under cold water, peel and cut into small pieces.",
             "In a bowl, beat the egg together with the capers, yogurt and salt and pepper into a creamy egg salad.",
             "Put the bread in the toaster and toast until golden brown.",
@@ -187,26 +194,245 @@
         "tags": [
             "breakfast",
             "clean_eating",
+            "high_protein",
             "low_fat",
-            "pescetarian",
             "snack",
-            "vegetarian"
+            "vegetarian",
+            "make_ahead"
         ],
-        "allergens": ["eggs"],
+
+        "allergens": ["egg", "dairy", "gluten"],
+
         "equipment": [
-            { "name": "bowl", "optional": false },
-            { "name": "fork", "optional": false },
-            { "name": "oven", "optional": false }
+            { "name": "pot", "optional": false },
+            { "name": "toaster", "optional": false },
+            { "name": "mixing_bowl", "optional": false },
+            { "name": "knife", "optional": false },
+            { "name": "cutting_board", "optional": false },
+            { "name": "spoon", "optional": false }
         ],
 
         "cuisine": "American",
         "difficulty": "easy",
-        "cost": { "value": 2.5, "currency": "EUR" },
+        "cost": { "value": 2.0, "currency": "EUR" },
+        "batch-friendly": false,
+        "prep_ahead_possible": true,
+        "expiration_day": 1,
+
+        "suitable_for_goals": ["maintenance", "weight_loss", "muscle_gain"],
+        "required_skills": [
+            "boiling",
+            "chopping",
+            "mixing",
+            "toasting",
+            "assembling"
+        ],
+
+        "image_url": "",
+        "source_url": "",
+        "author": ""
+    },
+    {
+        "id": "r3",
+        "rev": "2025-07-05.a",
+
+        "name": "Mini Blueberry Tarts",
+        "description": "These Mini Blueberry Tarts are great to prepare the day before you have friends or family over. They need to sit in the fridge for at least 5 hours. Leaving them overnight is even better. Compared to other fruits, blueberries are relatively low in carbs, making them perfect for keto recipes in small amounts.",
+
+        "prep_time_minutes": 30,
+        "cook_time_minutes": 10,
+        "rest_time_minutes": 300,
+        "servings": 6,
+
+        "ingredients": [
+            {
+                "name": "butter",
+                "quantity": { "quantity": 75, "unit": "g" },
+                "optional": false
+            },
+            {
+                "name": "almond_flour",
+                "quantity": { "quantity": 120, "unit": "g" },
+                "optional": false
+            },
+            {
+                "name": "egg",
+                "quantity": { "quantity": 1, "unit": "piece" },
+                "optional": false
+            },
+            {
+                "name": "lemon",
+                "quantity": { "quantity": 1, "unit": "piece" },
+                "optional": false
+            },
+            {
+                "name": "blueberries",
+                "quantity": { "quantity": 150, "unit": "g" },
+                "optional": false
+            },
+            {
+                "name": "water",
+                "quantity": { "quantity": 2, "unit": "tbsp" },
+                "optional": false
+            },
+            {
+                "name": "whipping_cream",
+                "quantity": { "quantity": 240, "unit": "g" },
+                "optional": false
+            },
+            {
+                "name": "cream_cheese_full_fat",
+                "quantity": { "quantity": 250, "unit": "g" },
+                "optional": false
+            },
+            {
+                "name": "sweetener",
+                "quantity": { "quantity": 0, "unit": "", "note": "to taste" },
+                "optional": true
+            },
+            {
+                "name": "gelatine_sheets",
+                "quantity": { "quantity": 5.1, "unit": "g" },
+                "optional": false
+            },
+            {
+                "name": "shredded_coconut_unsweetened",
+                "quantity": { "quantity": 75, "unit": "g" },
+                "optional": false
+            }
+        ],
+
+        "instructions": [
+            "Preheat the oven to 320°F (160°C).",
+            "Use a hand mixer to blend the softened butter, almond flour, shredded coconut and egg together into a smooth dough.",
+            "Coat tart molds with a little bit of butter, press the dough into the bottom, pulling it up onto the edges.",
+            "Place them on the middle rack of the oven and bake for approx. 10 minutes.",
+            "In the meantime, grate the lemon and squeeze out the juice. Set the grating and juice aside.",
+            "In a pot, add the blueberries and a tablespoon of lemon juice and simmer for approx. 5 minutes.",
+            "Soak the gelatine in cold water and beat the whipping cream until stiff.",
+            "Mix the cream cheese with the lemon peel gratings, the remaining lemon juice and sweetener until smooth.",
+            "Squeeze out the excess water from the gelatine and then warm in a pot over low heat with 2 tablespoons of water until the gelatine has dissolved.",
+            "Stir 2 tablespoons of cream cheese into the gelatine. Repeat with another 2 tablespoons of cream cheese.",
+            "Next, fold the gelatine mixture into the remaining cream cheese and then mix in the whipping cream.",
+            "Transfer the cream into the cooled tart molds and garnish each with blueberries.",
+            "Use a fork to carefully pull the blueberries through the cream to spread the blue color across the tarts. Place in the fridge for at least 5 hours.",
+            "Enjoy!"
+        ],
+
+        "tags": [
+            "dessert",
+            "gluten_free",
+            "ketogenic",
+            "low_carb",
+            "sugar_free",
+            "sweet",
+            "make_ahead"
+        ],
+
+        "allergens": ["egg", "dairy", "tree_nuts"],
+
+        "equipment": [
+            { "name": "oven", "optional": false },
+            { "name": "mixing_bowl", "optional": false },
+            { "name": "hand_mixer", "optional": false },
+            { "name": "tart_molds", "optional": false },
+            { "name": "pot", "optional": false },
+            { "name": "grater", "optional": false },
+            { "name": "fork", "optional": false },
+            { "name": "refrigerator", "optional": false }
+        ],
+
+        "cuisine": "American",
+        "difficulty": "intermediate",
+        "cost": { "value": 5.0, "currency": "EUR" },
         "batch-friendly": true,
         "prep_ahead_possible": true,
         "expiration_day": 3,
+
+        "suitable_for_goals": ["maintenance", "weight_loss", "ketogenic"],
+        "required_skills": [
+            "baking",
+            "mixing",
+            "whipping",
+            "grating",
+            "simmering",
+            "folding"
+        ],
+
+        "image_url": "",
+        "source_url": "",
+        "author": ""
+    },
+    {
+        "id": "r4",
+        "rev": "2025-07-05.a",
+
+        "name": "Chocolate Mousse",
+        "description": "This fluffy Chocolate Mousse tastes heavenly! The liquid from chickpeas, also known as aquafaba, is a great alternative to egg whites. Tip: You can also use it as a garnish at the end. The leftover chickpeas work great for a nice homemade hummus!",
+
+        "prep_time_minutes": 15,
+        "cook_time_minutes": 0,
+        "rest_time_minutes": 60,
+        "servings": 3,
+
+        "ingredients": [
+            {
+                "name": "chocolate",
+                "quantity": { "quantity": 120, "unit": "g", "note": "vegan" },
+                "optional": false
+            },
+            {
+                "name": "agave_nectar",
+                "quantity": { "quantity": 2, "unit": "tbsp" },
+                "optional": false
+            },
+            {
+                "name": "chickpeas",
+                "quantity": { "quantity": 400, "unit": "g", "note": "canned" },
+                "optional": false
+            }
+        ],
+
+        "instructions": [
+            "Chop the chocolate and melt in a water bath.",
+            "Combine with the agave nectar and let cool.",
+            "Drain the chickpeas, making sure to catch and save the liquid (also known as the aquafaba).",
+            "Place the chickpeas in a bowl in the fridge. Use a hand mixer to beat the aquafaba until frothy.",
+            "Fold the frothy aquafaba into the chocolate and let the entire mixture rest in the fridge for at least 1 hour.",
+            "Enjoy!"
+        ],
+
+        "tags": [
+            "dessert",
+            "vegan",
+            "vegetarian",
+            "lactose_free",
+            "gluten_free",
+            "few_ingredients",
+            "no_bake",
+            "sweet"
+        ],
+
+        "allergens": ["soy", "legumes"],
+
+        "equipment": [
+            { "name": "saucepan", "optional": false },
+            { "name": "heat_proof_bowl", "optional": false },
+            { "name": "mixing_bowl", "optional": false },
+            { "name": "hand_mixer", "optional": false },
+            { "name": "spatula", "optional": false },
+            { "name": "refrigerator", "optional": false }
+        ],
+
+        "cuisine": "American",
+        "difficulty": "easy",
+        "cost": { "value": 3.5, "currency": "EUR" },
+        "batch-friendly": true,
+        "prep_ahead_possible": true,
+        "expiration_day": 2,
+
         "suitable_for_goals": ["maintenance", "weight_loss"],
-        "required_skills": ["boiling", "mixing"],
+        "required_skills": ["melting", "whipping", "folding"],
 
         "image_url": "",
         "source_url": "",

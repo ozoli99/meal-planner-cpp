@@ -1,0 +1,145 @@
+{
+    "skills": {
+        "mixing": {
+            "name": "Mixing",
+            "category_id": "skl_basic_prep",
+            "level": 1,
+            "avg_minutes": 3,
+            "equipment": ["mixing_bowl", "whisk|hand_mixer"],
+            "prereq": [],
+            "aliases": ["stirring", "combining"]
+        },
+
+        "chopping": {
+            "name": "Chopping",
+            "category_id": "skl_knife",
+            "level": 1,
+            "avg_minutes": 5,
+            "equipment": ["knife", "cutting_board"],
+            "prereq": [],
+            "aliases": ["dicing", "mincing"]
+        },
+
+        "whipping": {
+            "name": "Whipping (aerating)",
+            "category_id": "skl_basic_prep",
+            "level": 2,
+            "avg_minutes": 4,
+            "equipment": ["whisk|hand_mixer"],
+            "prereq": ["mixing"]
+        },
+
+        "folding": {
+            "name": "Folding",
+            "category_id": "skl_batter",
+            "level": 3,
+            "avg_minutes": 2,
+            "equipment": ["spatula"],
+            "prereq": ["mixing"],
+            "description": "Gently combine an aerated mixture (e.g. whipped aquafaba) with a base without deflating it, using a cut-and-turn motion."
+        },
+
+        "baking": {
+            "name": "Baking",
+            "category_id": "skl_heat",
+            "level": 2,
+            "avg_minutes": 1,
+            "equipment": ["oven"],
+            "prereq": [],
+            "aliases": ["oven_baking"]
+        },
+
+        "simmering": {
+            "name": "Simmering",
+            "category_id": "skl_heat",
+            "level": 2,
+            "avg_minutes": 5,
+            "equipment": ["saucepan", "stovetop|hotplate"],
+            "prereq": []
+        },
+
+        "grating": {
+            "name": "Grating / zesting",
+            "category_id": "skl_prep",
+            "level": 1,
+            "avg_minutes": 2,
+            "equipment": ["grater|microplane"]
+        },
+
+        "portioning": {
+            "name": "Portioning / scooping",
+            "category_id": "skl_prep",
+            "level": 1,
+            "avg_minutes": 2,
+            "equipment": ["spoon|scoop"]
+        },
+
+        "mashing": {
+            "name": "Mashing",
+            "category_id": "skl_basic_prep",
+            "level": 1,
+            "avg_minutes": 2,
+            "equipment": ["fork|masher"],
+            "prereq": ["mixing"],
+            "aliases": ["smashing", "crushing"]
+        },
+
+        "blending": {
+            "name": "Blending / puréeing",
+            "category_id": "skl_basic_prep",
+            "level": 2,
+            "avg_minutes": 3,
+            "equipment": ["food_processor|hand_mixer"],
+            "prereq": ["mixing"],
+            "aliases": ["pureeing", "processing"]
+        },
+
+        "boiling": {
+            "name": "Boiling",
+            "category_id": "skl_heat",
+            "level": 1,
+            "avg_minutes": 2,
+            "equipment": ["pot|saucepan"],
+            "prereq": [],
+            "aliases": ["parboiling"]
+        },
+
+        "toasting": {
+            "name": "Toasting",
+            "category_id": "skl_heat",
+            "level": 1,
+            "avg_minutes": 1,
+            "equipment": ["toaster|oven"],
+            "prereq": []
+        },
+
+        "assembling": {
+            "name": "Assembling / plating",
+            "category_id": "skl_basic_prep",
+            "level": 1,
+            "avg_minutes": 2,
+            "equipment": ["knife|spoon"],
+            "prereq": []
+        },
+
+        "melting": {
+            "name": "Melting (bain-marie)",
+            "category_id": "skl_heat",
+            "level": 1,
+            "avg_minutes": 3,
+            "equipment": ["saucepan", "heat_proof_bowl"],
+            "prereq": [],
+            "aliases": ["water_bath", "double_boiler"]
+        }
+    },
+
+    "categories": {
+        "skl_basic_prep": { "name": "Basic prep", "parent": null },
+        "skl_prep": { "name": "Other prep", "parent": null },
+        "skl_knife": { "name": "Knife work", "parent": "skl_prep" },
+        "skl_batter": { "name": "Batter skills", "parent": "skl_prep" },
+        "skl_heat": { "name": "Heat methods", "parent": null }
+    },
+
+    "last_updated": "2025-07-05"
+}

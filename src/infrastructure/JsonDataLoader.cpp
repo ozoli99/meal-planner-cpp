@@ -28,110 +28,129 @@ std::vector<Recipe> JsonDataLoader::loadRecipes(const std::string& path) {
 
     json data;
     file >> data;
+    if (!data.is_array()) {
+        throw std::runtime_error("Invalid JSON format: expected an array of recipes");
+    }
 
     std::vector<Recipe> recipes;
     recipes.reserve(data.size());
 
-    for (auto& j : data) {
-        // Start with default Recipe
-        Recipe recipe;
-
-        // --- identity ---
-        recipe.id   = j.at("id").get<std::string>();
-        recipe.name = j.at("name").get<std::string>();
-
-        if (j.contains("description")) {
-            recipe.description = j["description"].get<std::string>();
-        }
-
-        // --- times & servings ---
-        recipe.prepTime = Minutes{ j.value("prep_time_minutes", 0) };
-        recipe.cookTime = Minutes{ j.value("cook_time_minutes", 0) };
-        recipe.restTime = Minutes{ j.value("rest_time_minutes", 0) };
-        recipe.servings = Servings{ j.value("servings", 1) };
-
-        // --- ingredients ---
-        if (j.contains("ingredients")) {
-            for (auto& ji : j["ingredients"]) {
-                // extract quantity first
-                double amt = ji["quantity"].value("quantity", 0.0);
-                std::string unit = ji["quantity"].value("unit", "");
-                std::string note = ji["quantity"].value("note", "");
-                Quantity qty{amt, unit, note};
-
-                std::string name = ji.at("name").get<std::string>();
-                bool optional    = ji.value("optional", false);
-
-                recipe.ingredients.emplace_back(
-                    std::move(name),
-                    std::move(qty),
-                    optional
-                );
+    for (size_t idx = 0; idx < data.size(); ++idx) {
+        auto& j = data[idx];
+        try {
+            Recipe recipe;
+    
+            // --- identity ---
+            recipe.id = j.at("id").get<std::string>();
+            recipe.name = j.at("name").get<std::string>();
+    
+            if (j.contains("description")) {
+                recipe.description = j["description"].get<std::string>();
             }
-        }
+    
+            // --- times & servings ---
+            recipe.prepTime = Minutes{ j.value("prep_time_minutes", 0) };
+            recipe.cookTime = Minutes{ j.value("cook_time_minutes", 0) };
+            recipe.restTime = Minutes{ j.value("rest_time_minutes", 0) };
+            recipe.servings = Servings{ j.value("servings", 1) };
+    
+            // --- ingredients ---
+            if (j.contains("ingredients")) {
+                for (auto& ji : j["ingredients"]) {
+                    Quantity qty{};
+                    if (!ji.contains("quantity")) {
+                        qty.amount = 0.0;
+                        qty.unit   = "";
+                        qty.note   = ji.value("note", "");
+                    } else {
+                        auto& jq = ji["quantity"];
+                        if (jq.is_number()) {
+                            // 2) flat number form
+                            qty.amount = jq.get<double>();
+                            qty.unit   = ji.value("unit", "");
+                            qty.note   = ji.value("note", "");
+                        } else if (jq.is_object()) {
+                            // 3) nested object form
+                            qty.amount = jq.value("quantity", 0.0);
+                            qty.unit   = jq.value("unit",     "");
+                            qty.note   = jq.value("note",     "");
+                        } else {
+                            throw std::runtime_error("Error parsing recipe[" + std::to_string(idx) + "]: ingredient['quantity'] must be a number or object");
+                        }
+                    }
 
-        // --- instructions, tags, allergens ---
-        if (j.contains("instructions")) {
-            for (auto& s : j["instructions"])
-                recipe.instructions.push_back(s.get<std::string>());
-        }
-        if (j.contains("tags")) {
-            for (auto& s : j["tags"])
-                recipe.tags.push_back(s.get<std::string>());
-        }
-        if (j.contains("allergens")) {
-            for (auto& s : j["allergens"])
-                recipe.allergens.push_back(s.get<std::string>());
-        }
-
-        // --- equipment ---
-        if (j.contains("equipment")) {
-            for (auto& je : j["equipment"]) {
-                std::string name = je.at("name").get<std::string>();
-                bool optional    = je.value("optional", false);
-                recipe.equipment.emplace_back(std::move(name), optional);
+                    std::string iname = ji.at("name").get<std::string>();
+                    bool optional     = ji.value("optional", false);
+                    recipe.ingredients.emplace_back(std::move(iname), std::move(qty), optional);
+                }
             }
+    
+            // --- instructions, tags, allergens ---
+            if (j.contains("instructions")) {
+                for (auto& s : j["instructions"])
+                    recipe.instructions.push_back(s.get<std::string>());
+            }
+            if (j.contains("tags")) {
+                for (auto& s : j["tags"])
+                    recipe.tags.push_back(s.get<std::string>());
+            }
+            if (j.contains("allergens")) {
+                for (auto& s : j["allergens"])
+                    recipe.allergens.push_back(s.get<std::string>());
+            }
+    
+            // --- equipment ---
+            if (j.contains("equipment")) {
+                for (auto& je : j["equipment"]) {
+                    std::string name = je.at("name").get<std::string>();
+                    bool optional    = je.value("optional", false);
+                    recipe.equipment.emplace_back(std::move(name), optional);
+                }
+            }
+    
+            // --- nutrition per serving ---
+            recipe.kcal    = Calories{ j.value("kcal",    0) };
+            recipe.protein = Grams   { j.value("protein", 0) };
+            recipe.carbs   = Grams   { j.value("carbs",   0) };
+            recipe.fat     = Grams   { j.value("fat",     0) };
+    
+            // --- optional metadata ---
+            if (j.contains("cuisine")) {
+                recipe.cuisine = cuisineFromString(j["cuisine"].get<std::string>());
+            }
+            if (j.contains("difficulty")) {
+                recipe.difficulty = difficultyFromString(j["difficulty"].get<std::string>());
+            }
+            if (j.contains("cost")) {
+                auto& jc = j["cost"];
+                double  val = jc.value("value", 0.0);
+                std::string cur = jc.value("currency", "");
+                recipe.cost = Cost{val, currencyFromString(cur)};
+            }
+    
+            recipe.batchFriendly     = j.value("batch-friendly",      false);
+            recipe.prepAheadPossible = j.value("prep_ahead_possible", false);
+            recipe.expirationDays    = j.value("expiration_day",      0);
+    
+            if (j.contains("suitable_for_goals")) {
+                for (const auto& s : j["suitable_for_goals"])
+                    recipe.suitableForGoals.push_back(s.get<std::string>());
+            }
+            if (j.contains("required_skills")) {
+                for (auto& s : j["required_skills"])
+                    recipe.requiredSkills.push_back(s.get<std::string>());
+            }
+    
+            // --- source info ---
+            if (j.contains("image_url"))  recipe.imageUrl  = j["image_url"].get<std::string>();
+            if (j.contains("source_url")) recipe.sourceUrl = j["source_url"].get<std::string>();
+            if (j.contains("author"))     recipe.author    = j["author"].get<std::string>();
+    
+            recipes.push_back(std::move(recipe));
+        } catch (const nlohmann::json::exception& e) {
+            std::string id = j.contains("id") ? j["id"].dump() : "<unknown>";
+            throw std::runtime_error("Error parsing recipe[" + std::to_string(idx) + "] (id=" + id + "): " + e.what());
         }
-
-        // --- nutrition per serving ---
-        recipe.kcal    = Calories{ j.value("kcal",    0) };
-        recipe.protein = Grams   { j.value("protein", 0) };
-        recipe.carbs   = Grams   { j.value("carbs",   0) };
-        recipe.fat     = Grams   { j.value("fat",     0) };
-
-        // --- optional metadata ---
-        if (j.contains("cuisine")) {
-            recipe.cuisine = cuisineFromString(j["cuisine"].get<std::string>());
-        }
-        if (j.contains("difficulty")) {
-            recipe.difficulty = difficultyFromString(j["difficulty"].get<std::string>());
-        }
-        if (j.contains("cost")) {
-            auto& jc = j["cost"];
-            double  val = jc.value("value", 0.0);
-            std::string cur = jc.value("currency", "");
-            recipe.cost = Cost{val, currencyFromString(cur)};
-        }
-
-        recipe.batchFriendly     = j.value("batch-friendly",      false);
-        recipe.prepAheadPossible = j.value("prep_ahead_possible", false);
-        recipe.expirationDays    = j.value("expiration_day",      0);
-
-        if (j.contains("suitable_for_goals")) {
-            for (const auto& s : j["suitable_for_goals"])
-                recipe.suitableForGoals.push_back(s.get<std::string>());
-        }
-        if (j.contains("required_skills")) {
-            for (auto& s : j["required_skills"])
-                recipe.requiredSkills.push_back(s.get<std::string>());
-        }
-
-        // --- source info ---
-        if (j.contains("image_url"))  recipe.imageUrl  = j["image_url"].get<std::string>();
-        if (j.contains("source_url")) recipe.sourceUrl = j["source_url"].get<std::string>();
-        if (j.contains("author"))     recipe.author    = j["author"].get<std::string>();
-
-        recipes.push_back(std::move(recipe));
     }
 
     return recipes;

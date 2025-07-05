@@ -1,0 +1,64 @@
+[
+    {
+        "plan_id": "mp_2025w28_july7",
+        "user_id": 42,
+        "created_at": "2025-07-04T19:00:00+02:00",
+        "starts": "2025-07-07",
+        "ends": "2025-07-13",
+        "timezone": "Europe/Budapest",
+
+        "goals": {
+            "kcal_per_day": 2400,
+            "protein_g": 150,
+            "carbs_max_g": 200,
+            "tags": ["maintenance", "high_protein"]
+        },
+
+        "days": [
+            {
+                "date": "2025-07-07",
+                "meals": [
+                    {
+                        "slot": "breakfast",
+                        "recipe_id": "r1",
+                        "servings": 1,
+                        "prepared_ahead": false
+                    },
+                    { "slot": "lunch", "recipe_id": "r2", "servings": 1 },
+                    {
+                        "slot": "dinner",
+                        "recipe_id": "r3",
+                        "servings": 2,
+                        "notes": "friend coming over"
+                    }
+                ],
+                "totals": {
+                    "kcal": 2375,
+                    "protein": 102,
+                    "carbs": 182,
+                    "fat": 88,
+                    "fiber": 28
+                }
+            },
+
+            {
+                "date": "2025-07-08",
+                "meals": []
+            }
+        ],
+
+        "weekly_totals": {
+            "kcal": 16625,
+            "protein": 714,
+            "carbs": 1210,
+            "fat": 560,
+            "fiber": 196
+        },
+
+        "leftovers": [
+            { "recipe_id": "r3", "servings": 1, "ready_date": "2025-07-08" }
+        ],
+
+        "shopping_list_id": "sl_2025w28_july5"
+    }
+]

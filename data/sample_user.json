@@ -1,13 +1,64 @@
 {
+    "user_id": 17,
     "name": "Zoltán",
-    "calorie_target": 2200,
-    "macro_ratios": {
-        "protein": 0.25,
-        "carbs": 0.5,
-        "fat": 0.25
+    "created_at": "2025-07-04T19:45:00+02:00",
+    "timezone": "Europe/Budapest",
+    "locale": "hu",
+
+    "nutrition": {
+        "calorie_target": 2200,
+        "macro_ratios": {
+            "protein": 0.25,
+            "carbs": 0.5,
+            "fat": 0.25
+        },
+        "absolute_targets_g": {
+            "protein": 140,
+            "carbs": 275,
+            "fat": 61
+        },
+        "goals": ["maintenance", "high_protein"]
     },
-    "dietary_restrictions": ["vegetarian", "nut_free"],
-    "meals_per_day": 5,
-    "snack_slots": 2,
-    "max_prep_time_minutes": 30
+
+    "restrictions": {
+        "dietary_tags": ["vegetarian"],
+        "allergens": ["tree_nuts"],
+        "disliked_ingredients": ["cilantro"]
+    },
+
+    "planning": {
+        "meals_per_day": 5,
+        "snack_slots": 2,
+        "max_prep_time_minutes": 30,
+        "max_difficulty": 3,
+        "preferred_cuisines": ["Hungarian", "Mexican"],
+        "budget_eur_per_week": 60
+    },
+
+    "kitchen": {
+        "equipment_owned": [
+            "oven",
+            "mixing_bowl",
+            "whisk",
+            "refrigerator",
+            "hand_mixer",
+            "muffin_tin"
+        ],
+        "skills": {
+            "mixing": 3,
+            "baking": 2,
+            "folding": 1
+        }
+    },
+
+    "pantry_path": "pantry/user17.json",
+    "active_meal_plan_id": "mp_2025w28_july7",
+    "notification_prefs": {
+        "push": true,
+        "email": false,
+        "reminders": {
+            "shopping_day": "friday 18:00",
+            "meal_prep": "daily 08:00"
+        }
+    }
 }

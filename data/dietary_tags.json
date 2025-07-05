@@ -1,0 +1,176 @@
+{
+    "groups": {
+        "gluten_sources": [
+            "wheat_flour",
+            "spelt",
+            "barley",
+            "rye",
+            "bulgur",
+            "farro",
+            "semolina",
+            "triticale",
+            "malt",
+            "whole_wheat_bread",
+            "corn_flour"
+        ],
+
+        "animal_meat": [
+            "beef",
+            "pork",
+            "lamb",
+            "game",
+            "chicken_breast",
+            "chicken_thigh",
+            "chicken_wing",
+            "chicken_drumstick",
+            "fish_catfish",
+            "fish_cod",
+            "fish_haddock",
+            "fish_salmon",
+            "fish_pollock",
+            "fish_tilapia",
+            "shellfish",
+            "turkey",
+            "duck"
+        ],
+
+        "animal_products": [
+            "egg",
+            "egg_white",
+            "egg_yolk",
+            "cottage_cheese",
+            "feta_cheese",
+            "mozzarella_cheese",
+            "ricotta_cheese",
+            "milk",
+            "cream",
+            "whipping_cream",
+            "butter",
+            "whey",
+            "yogurt",
+            "greek_yogurt",
+            "cream_cheese_full_fat",
+            "cream_cheese_low_fat",
+            "honey"
+        ],
+
+        "high_fodmap": [
+            "cabbage",
+            "cauliflower",
+            "broccoli",
+            "brussels_sprouts",
+            "onion",
+            "garlic",
+            "wheat_flour",
+            "honey",
+            "apple",
+            "avocado"
+        ],
+
+        "tree_nuts": [
+            "almond",
+            "almond_flour",
+            "cashew",
+            "hazelnut",
+            "pistachio",
+            "walnut",
+            "pecan",
+            "macadamia"
+        ]
+    },
+
+    "tags": {
+        "gluten_free": {
+            "type": "exclusion",
+            "excludes_groups": ["gluten_sources"]
+        },
+
+        "lactose_free": {
+            "type": "exclusion",
+            "excludes_ids": [
+                "milk",
+                "cream",
+                "whipping_cream",
+                "butter",
+                "yogurt",
+                "greek_yogurt",
+                "ricotta_cheese",
+                "mozzarella_cheese",
+                "cream_cheese_full_fat",
+                "cottage_cheese",
+                "cottage_cheese_low_fat",
+                "cottage_cheese_full_fat"
+            ]
+        },
+
+        "nut_free": {
+            "type": "exclusion",
+            "excludes_groups": ["tree_nuts"]
+        },
+
+        "low_fodmap": {
+            "type": "exclusion",
+            "excludes_groups": ["high_fodmap"]
+        },
+
+        "vegan": {
+            "type": "exclusion",
+            "excludes_groups": ["animal_meat", "animal_products"],
+            "note": "No animal meat or animal-derived products (includes honey)."
+        },
+
+        "vegetarian": {
+            "type": "exclusion",
+            "excludes_groups": ["animal_meat"]
+        },
+
+        "pescetarian": {
+            "type": "exclusion",
+            "excludes_groups": ["animal_meat"],
+            "includes_ids": [
+                "fish_catfish",
+                "fish_cod",
+                "fish_haddock",
+                "fish_pollock",
+                "fish_salmon",
+                "fish_tilapia",
+                "shellfish"
+            ]
+        },
+
+        "ketogenic": {
+            "type": "macro_threshold",
+            "max_carbs_g_per_serving": 10,
+            "max_net_carbs_pct_kcal": 0.1,
+            "note": "≤ 10 g total carbs **and** ≤ 10 % of kcal from net carbs."
+        },
+
+        "low_carb": {
+            "type": "macro_threshold",
+            "max_carbs_g_per_serving": 20
+        },
+
+        "high_protein": {
+            "type": "macro_threshold",
+            "min_protein_pct_kcal": 0.25
+        },
+
+        "low_fat": {
+            "type": "macro_threshold",
+            "max_fat_pct_kcal": 0.3
+        },
+
+        "high_fiber": {
+            "type": "macro_threshold",
+            "min_fiber_g_per_100kcal": 1
+        }
+    },
+
+    "defaults": {
+        "net_carbs_formula": "carbs - fiber",
+        "kcal_per_g": { "protein": 4, "carbs": 4, "fat": 9, "fiber": 2 }
+    },
+
+    "last_updated": "2025-07-05",
+    "source": "Internal rules + USDA FoodData Central macros 2025-05 release"
+}

@@ -1,0 +1,59 @@
+[
+    {
+        "list_id": "sl_2025w28_july5",
+        "user_id": 42,
+        "created_at": "2025-07-05T09:15:00+02:00",
+        "region": "HU_BU",
+        "generated_from": "mp_2025w28_july7",
+        "status": "active",
+
+        "est_cost_eur": 31.8,
+
+        "items": [
+            {
+                "ingredient_id": "apple",
+                "section": "produce",
+                "needed_qty_g": 900,
+                "in_pantry_g": 0,
+                "pack_size_g": 1000,
+                "packs_to_buy": 1,
+                "est_cost_eur": 1.8,
+                "checked": false
+            },
+
+            {
+                "ingredient_id": "almond_milk",
+                "section": "dairy & alts",
+                "needed_qty_ml": 1000,
+                "in_pantry_ml": 0,
+                "pack_size_ml": 1000,
+                "packs_to_buy": 1,
+                "est_cost_eur": 2.2,
+                "checked": false
+            },
+
+            {
+                "ingredient_id": "chicken_breast",
+                "section": "meat",
+                "needed_qty_g": 1000,
+                "in_pantry_g": 100,
+                "pack_size_g": 500,
+                "packs_to_buy": 2,
+                "est_cost_eur": 6.7,
+                "checked": false,
+                "note": "look for sale packs"
+            },
+
+            {
+                "ingredient_id": "oats",
+                "section": "dry goods",
+                "needed_qty_g": 500,
+                "in_pantry_g": 350,
+                "pack_size_g": 1000,
+                "packs_to_buy": 1,
+                "est_cost_eur": 1.6,
+                "checked": true
+            }
+        ]
+    }
+]

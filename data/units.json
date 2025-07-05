@@ -1,0 +1,70 @@
+{
+    "canonical_units": {
+        "g": { "type": "mass", "to_g": 1 },
+        "kg": { "type": "mass", "to_g": 1000 },
+        "mg": { "type": "mass", "to_g": 0.001 },
+        "oz": { "type": "mass", "to_g": 28.3495 },
+        "lb": { "type": "mass", "to_g": 453.592 },
+
+        "ml": { "type": "volume", "to_ml": 1 },
+        "l": { "type": "volume", "to_ml": 1000 },
+        "tsp": { "type": "volume", "to_ml": 5 },
+        "tbsp": { "type": "volume", "to_ml": 15 },
+        "cup": { "type": "volume", "to_ml": 240 },
+        "pinch": { "type": "volume", "to_ml": 0.31 },
+
+        "piece": { "type": "count", "to_each": 1 },
+        "slice": { "type": "count", "to_each": 1 },
+        "clove": { "type": "count", "to_each": 1 }
+    },
+
+    "aliases": {
+        "gram": "g",
+        "grams": "g",
+        "kilogram": "kg",
+        "kilograms": "kg",
+        "milligram": "mg",
+        "milligrams": "mg",
+        "ounce": "oz",
+        "ounces": "oz",
+        "pound": "lb",
+        "pounds": "lb",
+
+        "milliliter": "ml",
+        "milliliters": "ml",
+        "millilitre": "ml",
+        "millilitres": "ml",
+        "liter": "l",
+        "litre": "l",
+        "liters": "l",
+        "litres": "l",
+
+        "teaspoon": "tsp",
+        "teaspoons": "tsp",
+        "tsp.": "tsp",
+        "tablespoon": "tbsp",
+        "tablespoons": "tbsp",
+        "tbsp.": "tbsp",
+        "tbsp": "tbsp",
+        "tbl": "tbsp",
+        "cup.": "cup",
+        "cups": "cup",
+
+        "pcs": "piece",
+        "pc": "piece",
+        "pieces": "piece",
+        "slices": "slice",
+        "cloves": "clove"
+    },
+
+    "density_overrides": {
+        "almond_milk": { "ml_to_g": 1.04 },
+        "honey": { "ml_to_g": 1.42 },
+        "olive_oil": { "ml_to_g": 0.92 },
+        "water": { "ml_to_g": 1.0 },
+        "whipping_cream": { "ml_to_g": 0.97 },
+        "agave_nectar": { "ml_to_g": 1.37 },
+        "almond_milk_unsweetened_refrig": { "ml_to_g": 1.04 },
+        "almond_milk_unsweetened_shelf": { "ml_to_g": 1.03 }
+    }
+}

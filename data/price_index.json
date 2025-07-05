@@ -1,0 +1,59 @@
+{
+    "currency": "EUR",
+    "unit": "per_kg",
+    "last_updated": "2025-07-04",
+    "source": "Average Budapest retail prices (TESCO, Lidl, Auchan) May–Jun 2025",
+
+    "regions": {
+        "HU_BU": {
+            "vat_pct": 27,
+            "data": {
+                "apple": { "price": 1.8 },
+                "apple_granny_smith": { "price": 2.1 },
+                "apple_gala": { "price": 1.95 },
+
+                "banana": { "price": 2.3 },
+                "blueberries": { "price": 9.5, "unit": "per_kg_frozen" },
+                "avocado": { "price": 7.8 },
+
+                "broccoli": { "price": 3.2 },
+                "brussels_sprouts": { "price": 4.4 },
+                "cauliflower": { "price": 2.9 },
+
+                "cottage_cheese": { "price": 4.5 },
+                "cottage_cheese_low_fat": { "price": 4.7 },
+                "cottage_cheese_full_fat": { "price": 4.3 },
+
+                "egg": { "price": 0.3, "unit": "per_piece" },
+
+                "chicken_breast": { "price": 6.7 },
+                "chicken_thigh": { "price": 4.9 },
+                "chicken_drumstick": { "price": 4.6 },
+                "chicken_wing": { "price": 3.8 },
+
+                "fish_salmon": { "price": 18.9 },
+                "fish_cod": { "price": 15.1 },
+                "fish_pollock": { "price": 9.9 },
+
+                "oats": { "price": 1.6 },
+                "almond_milk": { "price": 2.2, "unit": "per_litre" },
+                "honey": { "price": 6.5, "unit": "per_kg_local" }
+            }
+        },
+
+        "DE_NI": {
+            "vat_pct": 7,
+            "data": {
+                "apple": { "price": 1.6 },
+                "banana": { "price": 1.8 },
+                "oats": { "price": 1.2 }
+            }
+        }
+    },
+
+    "pack_sizes": {
+        "almond_milk": { "ml": 1000 },
+        "oats": { "g": 1000 },
+        "egg": { "units": 10 }
+    }
+}

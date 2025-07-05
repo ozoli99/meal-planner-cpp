@@ -1,0 +1,710 @@
+{
+    "unit_basis": "per_100g",
+    "source": "USDA FoodData Central",
+    "last_updated": "2025-07-04",
+    "data": {
+        "almond": {
+            "kcal": 629,
+            "protein": 21.4,
+            "carbs": 20,
+            "fat": 51.1
+        },
+        "almond_flour": {
+            "kcal": 622,
+            "protein": 26.2,
+            "carbs": 16.2,
+            "fat": 50.2
+        },
+        "almond_butter": {
+            "kcal": 614,
+            "protein": 21.2,
+            "carbs": 19.7,
+            "fat": 53.1
+        },
+        "almond_butter_creamy": {
+            "kcal": 645,
+            "protein": 20.8,
+            "carbs": 21.2,
+            "fat": 53
+        },
+        "almond_dry_roasted_salted": {
+            "kcal": 667,
+            "protein": 20.4,
+            "carbs": 16.2,
+            "fat": 57.8
+        },
+        "almond_milk": {
+            "kcal": 19,
+            "protein": 0.7,
+            "carbs": 0.7,
+            "fat": 1.6
+        },
+        "almond_milk_unsweetened_refrig": {
+            "kcal": 19,
+            "protein": 0.66,
+            "carbs": 0.67,
+            "fat": 1.56
+        },
+        "almond_milk_unsweetened_shelf": {
+            "kcal": 15,
+            "protein": 0.55,
+            "carbs": 0.34,
+            "fat": 1.22
+        },
+        "apple": {
+            "kcal": 65,
+            "protein": 0.2,
+            "carbs": 15.6,
+            "fat": 0.2
+        },
+        "apricot": {
+            "kcal": 48,
+            "protein": 1,
+            "carbs": 10.2,
+            "fat": 0.4
+        },
+        "asparagus": {
+            "kcal": 28,
+            "protein": 1.4,
+            "carbs": 5.1,
+            "fat": 0.2
+        },
+        "avocado": {
+            "kcal": 223,
+            "protein": 1.8,
+            "carbs": 8.3,
+            "fat": 20.3
+        },
+        "baking_powder": {
+            "kcal": 97,
+            "protein": 0.1,
+            "carbs": 46.9,
+            "fat": 0.4
+        },
+        "baking_soda": {
+            "kcal": 0,
+            "protein": 0,
+            "carbs": 0,
+            "fat": 0
+        },
+        "banana": {
+            "kcal": 98,
+            "protein": 0.7,
+            "carbs": 23,
+            "fat": 0.3
+        },
+        "basil": {
+            "kcal": 23,
+            "protein": 3.2,
+            "carbs": 2.7,
+            "fat": 0.6
+        },
+        "basil_fresh": {
+            "kcal": 23,
+            "protein": 3.15,
+            "carbs": 2.65,
+            "fat": 0.64
+        },
+        "basil_dried": {
+            "kcal": 233,
+            "protein": 23,
+            "carbs": 47.8,
+            "fat": 4.07
+        },
+        "beets": {
+            "kcal": 45,
+            "protein": 1.7,
+            "carbs": 8.8,
+            "fat": 0.3
+        },
+        "blueberries": {
+            "kcal": 57,
+            "protein": 0.7,
+            "carbs": 14.5,
+            "fat": 0.3
+        },
+        "broccoli": { "kcal": 39, "protein": 2.6, "carbs": 6.3, "fat": 0.3 },
+        "brussels_sprouts": {
+            "kcal": 59,
+            "protein": 4.0,
+            "carbs": 9.6,
+            "fat": 0.6
+        },
+        "buckwheat": {
+            "kcal": 356,
+            "protein": 11.1,
+            "carbs": 71.1,
+            "fat": 3
+        },
+        "bulgur": {
+            "kcal": 372,
+            "protein": 11.8,
+            "carbs": 75.9,
+            "fat": 2.4
+        },
+        "butter": {
+            "kcal": 717,
+            "protein": 0.9,
+            "carbs": 0.1,
+            "fat": 81
+        },
+        "butter_salted": {
+            "kcal": 717,
+            "protein": 0.9,
+            "carbs": 0.1,
+            "fat": 81
+        },
+        "butter_unsalted": {
+            "kcal": 717,
+            "protein": 0.9,
+            "carbs": 0.1,
+            "fat": 81
+        },
+        "capers": {
+            "kcal": 23,
+            "protein": 2.36,
+            "carbs": 4.89,
+            "fat": 0.86
+        },
+        "cauliflower": {
+            "kcal": 28,
+            "protein": 1.6,
+            "carbs": 4.7,
+            "fat": 0.2
+        },
+        "celery": {
+            "kcal": 17,
+            "protein": 0.5,
+            "carbs": 3.3,
+            "fat": 0.2
+        },
+        "cinnamon": {
+            "kcal": 247,
+            "protein": 3.99,
+            "carbs": 80.6,
+            "fat": 1.24
+        },
+        "coconut": {
+            "kcal": 354,
+            "protein": 3.3,
+            "carbs": 15.2,
+            "fat": 33.5
+        },
+        "coconut_meat_raw": {
+            "kcal": 354,
+            "protein": 3.33,
+            "carbs": 15.2,
+            "fat": 33.5
+        },
+        "coconut_meat_dried_unsweet": {
+            "kcal": 660,
+            "protein": 6.88,
+            "carbs": 23.6,
+            "fat": 64.5
+        },
+        "coconut_meat_dried_toasted": {
+            "kcal": 592,
+            "protein": 5.3,
+            "carbs": 44.4,
+            "fat": 47
+        },
+        "coconut_meat_dried_sweet_shredded": {
+            "kcal": 501,
+            "protein": 2.88,
+            "carbs": 47.7,
+            "fat": 35.5
+        },
+        "coconut_meat_dried_sweet_flaked_canned": {
+            "kcal": 443,
+            "protein": 3.35,
+            "carbs": 40.9,
+            "fat": 31.7
+        },
+        "coconut_meat_dried_sweet_flaked_pkg": {
+            "kcal": 456,
+            "protein": 3.13,
+            "carbs": 51.8,
+            "fat": 28
+        },
+        "coconut_flour": {
+            "kcal": 438,
+            "protein": 16.1,
+            "carbs": 58.9,
+            "fat": 15.3
+        },
+        "coconut_oil": {
+            "kcal": 895,
+            "protein": 0,
+            "carbs": 0.84,
+            "fat": 99.1
+        },
+        "coconut_water": {
+            "kcal": 19,
+            "protein": 0.72,
+            "carbs": 3.71,
+            "fat": 0.2
+        },
+        "coconut_milk": {
+            "kcal": 230,
+            "protein": 2.3,
+            "carbs": 6.6,
+            "fat": 24.3
+        },
+        "coconut_milk_canned": {
+            "kcal": 197,
+            "protein": 2.02,
+            "carbs": 2.81,
+            "fat": 21.3
+        },
+        "coconut_milk_frozen": {
+            "kcal": 202,
+            "protein": 1.61,
+            "carbs": 5.58,
+            "fat": 20.8
+        },
+        "coconut_milk_raw": {
+            "kcal": 230,
+            "protein": 2.29,
+            "carbs": 5.54,
+            "fat": 23.8
+        },
+        "coconut_milk_sweetened_fortified": {
+            "kcal": 31,
+            "protein": 0.21,
+            "carbs": 2.92,
+            "fat": 2.08
+        },
+        "cottage_cheese": {
+            "kcal": 103,
+            "protein": 11.6,
+            "carbs": 4.6,
+            "fat": 4.2
+        },
+        "cream_cheese": {
+            "kcal": 350,
+            "protein": 6.15,
+            "carbs": 5.52,
+            "fat": 34.4
+        },
+        "cream_cheese_full_fat": {
+            "kcal": 343,
+            "protein": 5.79,
+            "carbs": 4.56,
+            "fat": 33.5
+        },
+        "cream_cheese_low_fat": {
+            "kcal": 208,
+            "protein": 7.85,
+            "carbs": 6.73,
+            "fat": 16.7
+        },
+        "cream_cheese_fat_free": {
+            "kcal": 105,
+            "protein": 15.7,
+            "carbs": 7.66,
+            "fat": 1
+        },
+        "feta_cheese": {
+            "kcal": 273,
+            "protein": 19.7,
+            "carbs": 5.6,
+            "fat": 19.1
+        },
+        "mozzarella_cheese": {
+            "kcal": 296,
+            "protein": 23.7,
+            "carbs": 4.4,
+            "fat": 20.4
+        },
+        "ricotta_cheese": {
+            "kcal": 157,
+            "protein": 7.8,
+            "carbs": 6.9,
+            "fat": 11
+        },
+        "chia_seeds": {
+            "kcal": 517,
+            "protein": 17,
+            "carbs": 38.3,
+            "fat": 32.9
+        },
+        "chicken_breast": {
+            "kcal": 106,
+            "protein": 22.5,
+            "carbs": 0,
+            "fat": 1.9
+        },
+        "chicken_drumstick": {
+            "kcal": 125,
+            "protein": 18.4,
+            "carbs": 0,
+            "fat": 5.9
+        },
+        "chicken_thigh": {
+            "kcal": 144,
+            "protein": 18.6,
+            "carbs": 0,
+            "fat": 7.9
+        },
+        "chicken_wing": {
+            "kcal": 168,
+            "protein": 18.4,
+            "carbs": 0,
+            "fat": 10.6
+        },
+        "chickpeas": {
+            "kcal": 164,
+            "protein": 8.9,
+            "carbs": 27.4,
+            "fat": 2.6
+        },
+        "corn_flour": {
+            "kcal": 376,
+            "protein": 7.6,
+            "carbs": 76.7,
+            "fat": 4.3
+        },
+        "corn": {
+            "kcal": 85,
+            "protein": 2.8,
+            "carbs": 14.7,
+            "fat": 1.6
+        },
+        "cucumber": {
+            "kcal": 16,
+            "protein": 0.6,
+            "carbs": 3,
+            "fat": 0.2
+        },
+        "egg_white": {
+            "kcal": 52,
+            "protein": 10.7,
+            "carbs": 2.4,
+            "fat": 0.1
+        },
+        "egg": {
+            "kcal": 143,
+            "protein": 12.4,
+            "carbs": 1,
+            "fat": 10
+        },
+        "egg_yolk": {
+            "kcal": 328,
+            "protein": 16.2,
+            "carbs": 1,
+            "fat": 28.8
+        },
+        "fish_catfish": {
+            "kcal": 129,
+            "protein": 16.5,
+            "carbs": 0,
+            "fat": 7.3
+        },
+        "fish_cod": {
+            "kcal": 66,
+            "protein": 16.1,
+            "carbs": 0,
+            "fat": 0.7
+        },
+        "fish_haddock": {
+            "kcal": 69,
+            "protein": 16.3,
+            "carbs": 0,
+            "fat": 0.45
+        },
+        "fish_pollock": {
+            "kcal": 53,
+            "protein": 12.3,
+            "carbs": 0,
+            "fat": 0.4
+        },
+        "fish_salmon": {
+            "kcal": 197,
+            "protein": 20.3,
+            "carbs": 0,
+            "fat": 13.1
+        },
+        "fish_tilapia": {
+            "kcal": 95,
+            "protein": 19,
+            "carbs": 0,
+            "fat": 2.5
+        },
+        "gelatine_sheets": {
+            "kcal": 381,
+            "protein": 7.8,
+            "carbs": 90.5,
+            "fat": 0
+        },
+        "greek_yogurt": {
+            "kcal": 65,
+            "protein": 9.6,
+            "carbs": 4.0,
+            "fat": 2.5
+        },
+        "greek_yogurt_plain_nonfat": {
+            "kcal": 59,
+            "protein": 10.3,
+            "carbs": 3.64,
+            "fat": 0.37
+        },
+        "greek_yogurt_plain_whole": {
+            "kcal": 94,
+            "protein": 8.78,
+            "carbs": 4.75,
+            "fat": 4.39
+        },
+        "greek_yogurt_strawberry_nonfat": {
+            "kcal": 82,
+            "protein": 8.06,
+            "carbs": 12.2,
+            "fat": 0.15
+        },
+        "honey": {
+            "kcal": 304,
+            "protein": 0.3,
+            "carbs": 82.4,
+            "fat": 0
+        },
+        "lemon": {
+            "kcal": 29,
+            "protein": 1.1,
+            "carbs": 9.32,
+            "fat": 0.3
+        },
+        "lettuce": {
+            "kcal": 15,
+            "protein": 0.6,
+            "carbs": 2.9,
+            "fat": 0.2
+        },
+        "lettuce_iceberg": {
+            "kcal": 17,
+            "protein": 0.74,
+            "carbs": 3.37,
+            "fat": 0.07
+        },
+        "lettuce_romaine": {
+            "kcal": 20,
+            "protein": 1.24,
+            "carbs": 3.24,
+            "fat": 0.26
+        },
+        "lettuce_romaine_green": {
+            "kcal": 21,
+            "protein": 0.98,
+            "carbs": 4.06,
+            "fat": 0.07
+        },
+        "lettuce_leaf_green": {
+            "kcal": 22,
+            "protein": 1.09,
+            "carbs": 4.07,
+            "fat": 0.16
+        },
+        "lettuce_leaf_red": {
+            "kcal": 18,
+            "protein": 0.88,
+            "carbs": 3.26,
+            "fat": 0.11
+        },
+        "oats": {
+            "kcal": 382,
+            "protein": 13.5,
+            "carbs": 68.7,
+            "fat": 5.9
+        },
+        "peanut": {
+            "kcal": 588,
+            "protein": 23.2,
+            "carbs": 26.5,
+            "fat": 43.3
+        },
+        "peanut_butter": {
+            "kcal": 588,
+            "protein": 25.1,
+            "carbs": 20.6,
+            "fat": 50.4
+        },
+        "peanut_butter_creamy": {
+            "kcal": 632,
+            "protein": 24,
+            "carbs": 22.7,
+            "fat": 49.4
+        },
+        "pepper": {
+            "kcal": 251,
+            "protein": 10.4,
+            "carbs": 64,
+            "fat": 3.26
+        },
+        "salt": {
+            "kcal": 0,
+            "protein": 0,
+            "carbs": 0,
+            "fat": 0
+        },
+        "sesame_seed": {
+            "kcal": 573,
+            "protein": 17.7,
+            "carbs": 23.4,
+            "fat": 49.7
+        },
+        "sesame_butter": {
+            "kcal": 586,
+            "protein": 18.1,
+            "carbs": 24,
+            "fat": 50.9
+        },
+        "sesame_butter_creamy": {
+            "kcal": 697,
+            "protein": 19.7,
+            "carbs": 14.2,
+            "fat": 62.4
+        },
+        "sweetener": {
+            "kcal": 0,
+            "protein": 0,
+            "carbs": 0,
+            "fat": 0
+        },
+        "agave_syrup": {
+            "kcal": 310,
+            "protein": 0.09,
+            "carbs": 76.4,
+            "fat": 0.45
+        },
+        "fructose_liquid": {
+            "kcal": 279,
+            "protein": 0,
+            "carbs": 76.1,
+            "fat": 0
+        },
+        "fructose_powder": {
+            "kcal": 368,
+            "protein": 0,
+            "carbs": 100,
+            "fat": 0
+        },
+        "erythritol": {
+            "kcal": 0,
+            "protein": 0,
+            "carbs": 100,
+            "fat": 0
+        },
+        "stevia_powder": {
+            "kcal": 0,
+            "protein": 0,
+            "carbs": 100,
+            "fat": 0
+        },
+        "sucralose_packets": {
+            "kcal": 336,
+            "protein": 0,
+            "carbs": 91.2,
+            "fat": 0
+        },
+        "aspartame_packets": {
+            "kcal": 365,
+            "protein": 2.17,
+            "carbs": 89.1,
+            "fat": 0
+        },
+        "saccharin_packets": {
+            "kcal": 360,
+            "protein": 0.94,
+            "carbs": 89.1,
+            "fat": 0
+        },
+        "sucralose_blend_white": {
+            "kcal": 398,
+            "protein": 0,
+            "carbs": 99.5,
+            "fat": 0
+        },
+        "sucralose_blend_brown": {
+            "kcal": 347,
+            "protein": 2.06,
+            "carbs": 84.8,
+            "fat": 0
+        },
+        "tomatoes": {
+            "kcal": 18,
+            "protein": 0.9,
+            "carbs": 3.9,
+            "fat": 0.2
+        },
+        "tomatoes_roma_raw": {
+            "kcal": 22,
+            "protein": 0.7,
+            "carbs": 3.84,
+            "fat": 0.42
+        },
+        "tomatoes_grape_raw": {
+            "kcal": 31,
+            "protein": 0.83,
+            "carbs": 5.51,
+            "fat": 0.63
+        },
+        "tomatoes_canned_whole": {
+            "kcal": 22,
+            "protein": 0.87,
+            "carbs": 4.29,
+            "fat": 0.21
+        },
+        "tomatoes_canned_diced": {
+            "kcal": 21,
+            "protein": 0.84,
+            "carbs": 3.32,
+            "fat": 0.5
+        },
+        "tomatoes_canned_crushed": {
+            "kcal": 38,
+            "protein": 1.44,
+            "carbs": 7.14,
+            "fat": 0.4
+        },
+        "tomato_puree_canned": {
+            "kcal": 41,
+            "protein": 1.58,
+            "carbs": 8.04,
+            "fat": 0.26
+        },
+        "tomato_sauce_canned": {
+            "kcal": 34,
+            "protein": 1.35,
+            "carbs": 6.33,
+            "fat": 0.38
+        },
+        "tomato_paste_unsalted": {
+            "kcal": 104,
+            "protein": 4.23,
+            "carbs": 20.2,
+            "fat": 0.73
+        },
+        "tomato_juice_concentrate": {
+            "kcal": 23,
+            "protein": 0.86,
+            "carbs": 4.32,
+            "fat": 0.29
+        },
+        "water": {
+            "kcal": 0,
+            "protein": 0,
+            "carbs": 0,
+            "fat": 0
+        },
+        "whipping_cream": {
+            "kcal": 340,
+            "protein": 2.84,
+            "carbs": 2.84,
+            "fat": 36.1
+        },
+        "whole_wheat_bread": {
+            "kcal": 254,
+            "protein": 12.3,
+            "carbs": 43.1,
+            "fat": 3.55
+        }
+    }
+}
